@@ -1,0 +1,1983 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0728.2252                               -->
+<workbook source-build='10.3.2 (10300.17.0728.2252)' source-platform='win' version='10.3' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='WorkoutWednesday2017Week33' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.3'>
+      <aliases enabled='yes' />
+      <column caption='StateParameter' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;OH&quot;'>
+        <calculation class='tableau' formula='&quot;OH&quot;' />
+        <members>
+          <member value='&quot;AK&quot;' />
+          <member value='&quot;AL&quot;' />
+          <member value='&quot;AR&quot;' />
+          <member value='&quot;AZ&quot;' />
+          <member value='&quot;CA&quot;' />
+          <member value='&quot;CO&quot;' />
+          <member value='&quot;CT&quot;' />
+          <member value='&quot;DC&quot;' />
+          <member value='&quot;DE&quot;' />
+          <member value='&quot;FL&quot;' />
+          <member value='&quot;GA&quot;' />
+          <member value='&quot;HI&quot;' />
+          <member value='&quot;IA&quot;' />
+          <member value='&quot;ID&quot;' />
+          <member value='&quot;IL&quot;' />
+          <member value='&quot;IN&quot;' />
+          <member value='&quot;KS&quot;' />
+          <member value='&quot;KY&quot;' />
+          <member value='&quot;LA&quot;' />
+          <member value='&quot;MA&quot;' />
+          <member value='&quot;MD&quot;' />
+          <member value='&quot;ME&quot;' />
+          <member value='&quot;MI&quot;' />
+          <member value='&quot;MN&quot;' />
+          <member value='&quot;MO&quot;' />
+          <member value='&quot;MS&quot;' />
+          <member value='&quot;MT&quot;' />
+          <member value='&quot;NC&quot;' />
+          <member value='&quot;ND&quot;' />
+          <member value='&quot;NE&quot;' />
+          <member value='&quot;NH&quot;' />
+          <member value='&quot;NJ&quot;' />
+          <member value='&quot;NM&quot;' />
+          <member value='&quot;NV&quot;' />
+          <member value='&quot;NY&quot;' />
+          <member value='&quot;OH&quot;' />
+          <member value='&quot;OK&quot;' />
+          <member value='&quot;OR&quot;' />
+          <member value='&quot;PA&quot;' />
+          <member value='&quot;RI&quot;' />
+          <member value='&quot;SC&quot;' />
+          <member value='&quot;SD&quot;' />
+          <member value='&quot;TN&quot;' />
+          <member value='&quot;TX&quot;' />
+          <member value='&quot;UT&quot;' />
+          <member value='&quot;VA&quot;' />
+          <member value='&quot;VT&quot;' />
+          <member value='&quot;WA&quot;' />
+          <member value='&quot;WI&quot;' />
+          <member value='&quot;WV&quot;' />
+          <member value='&quot;WY&quot;' />
+        </members>
+      </column>
+      <column caption='DateParameter' datatype='date' default-format='*MMMM YYYY' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='#2012-08-01#'>
+        <calculation class='tableau' formula='#2012-08-01#' />
+        <members>
+          <member value='#1975-01-01#' />
+          <member value='#1975-02-01#' />
+          <member value='#1975-03-01#' />
+          <member value='#1975-04-01#' />
+          <member value='#1975-05-01#' />
+          <member value='#1975-06-01#' />
+          <member value='#1975-07-01#' />
+          <member value='#1975-08-01#' />
+          <member value='#1975-09-01#' />
+          <member value='#1975-10-01#' />
+          <member value='#1975-11-01#' />
+          <member value='#1975-12-01#' />
+          <member value='#1976-01-01#' />
+          <member value='#1976-02-01#' />
+          <member value='#1976-03-01#' />
+          <member value='#1976-04-01#' />
+          <member value='#1976-05-01#' />
+          <member value='#1976-06-01#' />
+          <member value='#1976-07-01#' />
+          <member value='#1976-08-01#' />
+          <member value='#1976-09-01#' />
+          <member value='#1976-10-01#' />
+          <member value='#1976-11-01#' />
+          <member value='#1976-12-01#' />
+          <member value='#1977-01-01#' />
+          <member value='#1977-02-01#' />
+          <member value='#1977-03-01#' />
+          <member value='#1977-04-01#' />
+          <member value='#1977-05-01#' />
+          <member value='#1977-06-01#' />
+          <member value='#1977-07-01#' />
+          <member value='#1977-08-01#' />
+          <member value='#1977-09-01#' />
+          <member value='#1977-10-01#' />
+          <member value='#1977-11-01#' />
+          <member value='#1977-12-01#' />
+          <member value='#1978-01-01#' />
+          <member value='#1978-02-01#' />
+          <member value='#1978-03-01#' />
+          <member value='#1978-04-01#' />
+          <member value='#1978-05-01#' />
+          <member value='#1978-06-01#' />
+          <member value='#1978-07-01#' />
+          <member value='#1978-08-01#' />
+          <member value='#1978-09-01#' />
+          <member value='#1978-10-01#' />
+          <member value='#1978-11-01#' />
+          <member value='#1978-12-01#' />
+          <member value='#1979-01-01#' />
+          <member value='#1979-02-01#' />
+          <member value='#1979-03-01#' />
+          <member value='#1979-04-01#' />
+          <member value='#1979-05-01#' />
+          <member value='#1979-06-01#' />
+          <member value='#1979-07-01#' />
+          <member value='#1979-08-01#' />
+          <member value='#1979-09-01#' />
+          <member value='#1979-10-01#' />
+          <member value='#1979-11-01#' />
+          <member value='#1979-12-01#' />
+          <member value='#1980-01-01#' />
+          <member value='#1980-02-01#' />
+          <member value='#1980-03-01#' />
+          <member value='#1980-04-01#' />
+          <member value='#1980-05-01#' />
+          <member value='#1980-06-01#' />
+          <member value='#1980-07-01#' />
+          <member value='#1980-08-01#' />
+          <member value='#1980-09-01#' />
+          <member value='#1980-10-01#' />
+          <member value='#1980-11-01#' />
+          <member value='#1980-12-01#' />
+          <member value='#1981-01-01#' />
+          <member value='#1981-02-01#' />
+          <member value='#1981-03-01#' />
+          <member value='#1981-04-01#' />
+          <member value='#1981-05-01#' />
+          <member value='#1981-06-01#' />
+          <member value='#1981-07-01#' />
+          <member value='#1981-08-01#' />
+          <member value='#1981-09-01#' />
+          <member value='#1981-10-01#' />
+          <member value='#1981-11-01#' />
+          <member value='#1981-12-01#' />
+          <member value='#1982-01-01#' />
+          <member value='#1982-02-01#' />
+          <member value='#1982-03-01#' />
+          <member value='#1982-04-01#' />
+          <member value='#1982-05-01#' />
+          <member value='#1982-06-01#' />
+          <member value='#1982-07-01#' />
+          <member value='#1982-08-01#' />
+          <member value='#1982-09-01#' />
+          <member value='#1982-10-01#' />
+          <member value='#1982-11-01#' />
+          <member value='#1982-12-01#' />
+          <member value='#1983-01-01#' />
+          <member value='#1983-02-01#' />
+          <member value='#1983-03-01#' />
+          <member value='#1983-04-01#' />
+          <member value='#1983-05-01#' />
+          <member value='#1983-06-01#' />
+          <member value='#1983-07-01#' />
+          <member value='#1983-08-01#' />
+          <member value='#1983-09-01#' />
+          <member value='#1983-10-01#' />
+          <member value='#1983-11-01#' />
+          <member value='#1983-12-01#' />
+          <member value='#1984-01-01#' />
+          <member value='#1984-02-01#' />
+          <member value='#1984-03-01#' />
+          <member value='#1984-04-01#' />
+          <member value='#1984-05-01#' />
+          <member value='#1984-06-01#' />
+          <member value='#1984-07-01#' />
+          <member value='#1984-08-01#' />
+          <member value='#1984-09-01#' />
+          <member value='#1984-10-01#' />
+          <member value='#1984-11-01#' />
+          <member value='#1984-12-01#' />
+          <member value='#1985-01-01#' />
+          <member value='#1985-02-01#' />
+          <member value='#1985-03-01#' />
+          <member value='#1985-04-01#' />
+          <member value='#1985-05-01#' />
+          <member value='#1985-06-01#' />
+          <member value='#1985-07-01#' />
+          <member value='#1985-08-01#' />
+          <member value='#1985-09-01#' />
+          <member value='#1985-10-01#' />
+          <member value='#1985-11-01#' />
+          <member value='#1985-12-01#' />
+          <member value='#1986-01-01#' />
+          <member value='#1986-02-01#' />
+          <member value='#1986-03-01#' />
+          <member value='#1986-04-01#' />
+          <member value='#1986-05-01#' />
+          <member value='#1986-06-01#' />
+          <member value='#1986-07-01#' />
+          <member value='#1986-08-01#' />
+          <member value='#1986-09-01#' />
+          <member value='#1986-10-01#' />
+          <member value='#1986-11-01#' />
+          <member value='#1986-12-01#' />
+          <member value='#1987-01-01#' />
+          <member value='#1987-02-01#' />
+          <member value='#1987-03-01#' />
+          <member value='#1987-04-01#' />
+          <member value='#1987-05-01#' />
+          <member value='#1987-06-01#' />
+          <member value='#1987-07-01#' />
+          <member value='#1987-08-01#' />
+          <member value='#1987-09-01#' />
+          <member value='#1987-10-01#' />
+          <member value='#1987-11-01#' />
+          <member value='#1987-12-01#' />
+          <member value='#1988-01-01#' />
+          <member value='#1988-02-01#' />
+          <member value='#1988-03-01#' />
+          <member value='#1988-04-01#' />
+          <member value='#1988-05-01#' />
+          <member value='#1988-06-01#' />
+          <member value='#1988-07-01#' />
+          <member value='#1988-08-01#' />
+          <member value='#1988-09-01#' />
+          <member value='#1988-10-01#' />
+          <member value='#1988-11-01#' />
+          <member value='#1988-12-01#' />
+          <member value='#1989-01-01#' />
+          <member value='#1989-02-01#' />
+          <member value='#1989-03-01#' />
+          <member value='#1989-04-01#' />
+          <member value='#1989-05-01#' />
+          <member value='#1989-06-01#' />
+          <member value='#1989-07-01#' />
+          <member value='#1989-08-01#' />
+          <member value='#1989-09-01#' />
+          <member value='#1989-10-01#' />
+          <member value='#1989-11-01#' />
+          <member value='#1989-12-01#' />
+          <member value='#1990-01-01#' />
+          <member value='#1990-02-01#' />
+          <member value='#1990-03-01#' />
+          <member value='#1990-04-01#' />
+          <member value='#1990-05-01#' />
+          <member value='#1990-06-01#' />
+          <member value='#1990-07-01#' />
+          <member value='#1990-08-01#' />
+          <member value='#1990-09-01#' />
+          <member value='#1990-10-01#' />
+          <member value='#1990-11-01#' />
+          <member value='#1990-12-01#' />
+          <member value='#1991-01-01#' />
+          <member value='#1991-02-01#' />
+          <member value='#1991-03-01#' />
+          <member value='#1991-04-01#' />
+          <member value='#1991-05-01#' />
+          <member value='#1991-06-01#' />
+          <member value='#1991-07-01#' />
+          <member value='#1991-08-01#' />
+          <member value='#1991-09-01#' />
+          <member value='#1991-10-01#' />
+          <member value='#1991-11-01#' />
+          <member value='#1991-12-01#' />
+          <member value='#1992-01-01#' />
+          <member value='#1992-02-01#' />
+          <member value='#1992-03-01#' />
+          <member value='#1992-04-01#' />
+          <member value='#1992-05-01#' />
+          <member value='#1992-06-01#' />
+          <member value='#1992-07-01#' />
+          <member value='#1992-08-01#' />
+          <member value='#1992-09-01#' />
+          <member value='#1992-10-01#' />
+          <member value='#1992-11-01#' />
+          <member value='#1992-12-01#' />
+          <member value='#1993-01-01#' />
+          <member value='#1993-02-01#' />
+          <member value='#1993-03-01#' />
+          <member value='#1993-04-01#' />
+          <member value='#1993-05-01#' />
+          <member value='#1993-06-01#' />
+          <member value='#1993-07-01#' />
+          <member value='#1993-08-01#' />
+          <member value='#1993-09-01#' />
+          <member value='#1993-10-01#' />
+          <member value='#1993-11-01#' />
+          <member value='#1993-12-01#' />
+          <member value='#1994-01-01#' />
+          <member value='#1994-02-01#' />
+          <member value='#1994-03-01#' />
+          <member value='#1994-04-01#' />
+          <member value='#1994-05-01#' />
+          <member value='#1994-06-01#' />
+          <member value='#1994-07-01#' />
+          <member value='#1994-08-01#' />
+          <member value='#1994-09-01#' />
+          <member value='#1994-10-01#' />
+          <member value='#1994-11-01#' />
+          <member value='#1994-12-01#' />
+          <member value='#1995-01-01#' />
+          <member value='#1995-02-01#' />
+          <member value='#1995-03-01#' />
+          <member value='#1995-04-01#' />
+          <member value='#1995-05-01#' />
+          <member value='#1995-06-01#' />
+          <member value='#1995-07-01#' />
+          <member value='#1995-08-01#' />
+          <member value='#1995-09-01#' />
+          <member value='#1995-10-01#' />
+          <member value='#1995-11-01#' />
+          <member value='#1995-12-01#' />
+          <member value='#1996-01-01#' />
+          <member value='#1996-02-01#' />
+          <member value='#1996-03-01#' />
+          <member value='#1996-04-01#' />
+          <member value='#1996-05-01#' />
+          <member value='#1996-06-01#' />
+          <member value='#1996-07-01#' />
+          <member value='#1996-08-01#' />
+          <member value='#1996-09-01#' />
+          <member value='#1996-10-01#' />
+          <member value='#1996-11-01#' />
+          <member value='#1996-12-01#' />
+          <member value='#1997-01-01#' />
+          <member value='#1997-02-01#' />
+          <member value='#1997-03-01#' />
+          <member value='#1997-04-01#' />
+          <member value='#1997-05-01#' />
+          <member value='#1997-06-01#' />
+          <member value='#1997-07-01#' />
+          <member value='#1997-08-01#' />
+          <member value='#1997-09-01#' />
+          <member value='#1997-10-01#' />
+          <member value='#1997-11-01#' />
+          <member value='#1997-12-01#' />
+          <member value='#1998-01-01#' />
+          <member value='#1998-02-01#' />
+          <member value='#1998-03-01#' />
+          <member value='#1998-04-01#' />
+          <member value='#1998-05-01#' />
+          <member value='#1998-06-01#' />
+          <member value='#1998-07-01#' />
+          <member value='#1998-08-01#' />
+          <member value='#1998-09-01#' />
+          <member value='#1998-10-01#' />
+          <member value='#1998-11-01#' />
+          <member value='#1998-12-01#' />
+          <member value='#1999-01-01#' />
+          <member value='#1999-02-01#' />
+          <member value='#1999-03-01#' />
+          <member value='#1999-04-01#' />
+          <member value='#1999-05-01#' />
+          <member value='#1999-06-01#' />
+          <member value='#1999-07-01#' />
+          <member value='#1999-08-01#' />
+          <member value='#1999-09-01#' />
+          <member value='#1999-10-01#' />
+          <member value='#1999-11-01#' />
+          <member value='#1999-12-01#' />
+          <member value='#2000-01-01#' />
+          <member value='#2000-02-01#' />
+          <member value='#2000-03-01#' />
+          <member value='#2000-04-01#' />
+          <member value='#2000-05-01#' />
+          <member value='#2000-06-01#' />
+          <member value='#2000-07-01#' />
+          <member value='#2000-08-01#' />
+          <member value='#2000-09-01#' />
+          <member value='#2000-10-01#' />
+          <member value='#2000-11-01#' />
+          <member value='#2000-12-01#' />
+          <member value='#2001-01-01#' />
+          <member value='#2001-02-01#' />
+          <member value='#2001-03-01#' />
+          <member value='#2001-04-01#' />
+          <member value='#2001-05-01#' />
+          <member value='#2001-06-01#' />
+          <member value='#2001-07-01#' />
+          <member value='#2001-08-01#' />
+          <member value='#2001-09-01#' />
+          <member value='#2001-10-01#' />
+          <member value='#2001-11-01#' />
+          <member value='#2001-12-01#' />
+          <member value='#2002-01-01#' />
+          <member value='#2002-02-01#' />
+          <member value='#2002-03-01#' />
+          <member value='#2002-04-01#' />
+          <member value='#2002-05-01#' />
+          <member value='#2002-06-01#' />
+          <member value='#2002-07-01#' />
+          <member value='#2002-08-01#' />
+          <member value='#2002-09-01#' />
+          <member value='#2002-10-01#' />
+          <member value='#2002-11-01#' />
+          <member value='#2002-12-01#' />
+          <member value='#2003-01-01#' />
+          <member value='#2003-02-01#' />
+          <member value='#2003-03-01#' />
+          <member value='#2003-04-01#' />
+          <member value='#2003-05-01#' />
+          <member value='#2003-06-01#' />
+          <member value='#2003-07-01#' />
+          <member value='#2003-08-01#' />
+          <member value='#2003-09-01#' />
+          <member value='#2003-10-01#' />
+          <member value='#2003-11-01#' />
+          <member value='#2003-12-01#' />
+          <member value='#2004-01-01#' />
+          <member value='#2004-02-01#' />
+          <member value='#2004-03-01#' />
+          <member value='#2004-04-01#' />
+          <member value='#2004-05-01#' />
+          <member value='#2004-06-01#' />
+          <member value='#2004-07-01#' />
+          <member value='#2004-08-01#' />
+          <member value='#2004-09-01#' />
+          <member value='#2004-10-01#' />
+          <member value='#2004-11-01#' />
+          <member value='#2004-12-01#' />
+          <member value='#2005-01-01#' />
+          <member value='#2005-02-01#' />
+          <member value='#2005-03-01#' />
+          <member value='#2005-04-01#' />
+          <member value='#2005-05-01#' />
+          <member value='#2005-06-01#' />
+          <member value='#2005-07-01#' />
+          <member value='#2005-08-01#' />
+          <member value='#2005-09-01#' />
+          <member value='#2005-10-01#' />
+          <member value='#2005-11-01#' />
+          <member value='#2005-12-01#' />
+          <member value='#2006-01-01#' />
+          <member value='#2006-02-01#' />
+          <member value='#2006-03-01#' />
+          <member value='#2006-04-01#' />
+          <member value='#2006-05-01#' />
+          <member value='#2006-06-01#' />
+          <member value='#2006-07-01#' />
+          <member value='#2006-08-01#' />
+          <member value='#2006-09-01#' />
+          <member value='#2006-10-01#' />
+          <member value='#2006-11-01#' />
+          <member value='#2006-12-01#' />
+          <member value='#2007-01-01#' />
+          <member value='#2007-02-01#' />
+          <member value='#2007-03-01#' />
+          <member value='#2007-04-01#' />
+          <member value='#2007-05-01#' />
+          <member value='#2007-06-01#' />
+          <member value='#2007-07-01#' />
+          <member value='#2007-08-01#' />
+          <member value='#2007-09-01#' />
+          <member value='#2007-10-01#' />
+          <member value='#2007-11-01#' />
+          <member value='#2007-12-01#' />
+          <member value='#2008-01-01#' />
+          <member value='#2008-02-01#' />
+          <member value='#2008-03-01#' />
+          <member value='#2008-04-01#' />
+          <member value='#2008-05-01#' />
+          <member value='#2008-06-01#' />
+          <member value='#2008-07-01#' />
+          <member value='#2008-08-01#' />
+          <member value='#2008-09-01#' />
+          <member value='#2008-10-01#' />
+          <member value='#2008-11-01#' />
+          <member value='#2008-12-01#' />
+          <member value='#2009-01-01#' />
+          <member value='#2009-02-01#' />
+          <member value='#2009-03-01#' />
+          <member value='#2009-04-01#' />
+          <member value='#2009-05-01#' />
+          <member value='#2009-06-01#' />
+          <member value='#2009-07-01#' />
+          <member value='#2009-08-01#' />
+          <member value='#2009-09-01#' />
+          <member value='#2009-10-01#' />
+          <member value='#2009-11-01#' />
+          <member value='#2009-12-01#' />
+          <member value='#2010-01-01#' />
+          <member value='#2010-02-01#' />
+          <member value='#2010-03-01#' />
+          <member value='#2010-04-01#' />
+          <member value='#2010-05-01#' />
+          <member value='#2010-06-01#' />
+          <member value='#2010-07-01#' />
+          <member value='#2010-08-01#' />
+          <member value='#2010-09-01#' />
+          <member value='#2010-10-01#' />
+          <member value='#2010-11-01#' />
+          <member value='#2010-12-01#' />
+          <member value='#2011-01-01#' />
+          <member value='#2011-02-01#' />
+          <member value='#2011-03-01#' />
+          <member value='#2011-04-01#' />
+          <member value='#2011-05-01#' />
+          <member value='#2011-06-01#' />
+          <member value='#2011-07-01#' />
+          <member value='#2011-08-01#' />
+          <member value='#2011-09-01#' />
+          <member value='#2011-10-01#' />
+          <member value='#2011-11-01#' />
+          <member value='#2011-12-01#' />
+          <member value='#2012-01-01#' />
+          <member value='#2012-02-01#' />
+          <member value='#2012-03-01#' />
+          <member value='#2012-04-01#' />
+          <member value='#2012-05-01#' />
+          <member value='#2012-06-01#' />
+          <member value='#2012-07-01#' />
+          <member value='#2012-08-01#' />
+          <member value='#2012-09-01#' />
+          <member value='#2012-10-01#' />
+          <member value='#2012-11-01#' />
+          <member value='#2012-12-01#' />
+          <member value='#2013-01-01#' />
+          <member value='#2013-02-01#' />
+          <member value='#2013-03-01#' />
+          <member value='#2013-04-01#' />
+          <member value='#2013-05-01#' />
+          <member value='#2013-06-01#' />
+          <member value='#2013-07-01#' />
+          <member value='#2013-08-01#' />
+          <member value='#2013-09-01#' />
+          <member value='#2013-10-01#' />
+          <member value='#2013-11-01#' />
+          <member value='#2013-12-01#' />
+          <member value='#2014-01-01#' />
+          <member value='#2014-02-01#' />
+          <member value='#2014-03-01#' />
+          <member value='#2014-04-01#' />
+          <member value='#2014-05-01#' />
+          <member value='#2014-06-01#' />
+          <member value='#2014-07-01#' />
+          <member value='#2014-08-01#' />
+          <member value='#2014-09-01#' />
+          <member value='#2014-10-01#' />
+          <member value='#2014-11-01#' />
+          <member value='#2014-12-01#' />
+          <member value='#2015-01-01#' />
+          <member value='#2015-02-01#' />
+          <member value='#2015-03-01#' />
+          <member value='#2015-04-01#' />
+          <member value='#2015-05-01#' />
+          <member value='#2015-06-01#' />
+          <member value='#2015-07-01#' />
+          <member value='#2015-08-01#' />
+          <member value='#2015-09-01#' />
+          <member value='#2015-10-01#' />
+          <member value='#2015-11-01#' />
+          <member value='#2015-12-01#' />
+          <member value='#2016-01-01#' />
+          <member value='#2016-02-01#' />
+          <member value='#2016-03-01#' />
+          <member value='#2016-04-01#' />
+          <member value='#2016-05-01#' />
+          <member value='#2016-06-01#' />
+          <member value='#2016-07-01#' />
+          <member value='#2016-08-01#' />
+          <member value='#2016-09-01#' />
+          <member value='#2016-10-01#' />
+          <member value='#2016-11-01#' />
+          <member value='#2016-12-01#' />
+          <member value='#2017-01-01#' />
+          <member value='#2017-02-01#' />
+          <member value='#2017-03-01#' />
+          <member value='#2017-04-01#' />
+          <member value='#2017-05-01#' />
+          <member value='#2017-06-01#' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='State Indices (Freddie Mac)' inline='true' name='federated.1rn60ma0sfp6d216uouo20c9i4v6' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Freddie Mac' name='excel-direct.0dwh4t1038mz1p12p1ha71y0fry1'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/Dropbox/Analytics/Tableau Development/data/Freddie Mac.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[AK]' />
+            <value name='[AL]' />
+            <value name='[AR]' />
+            <value name='[AZ]' />
+            <value name='[CA]' />
+            <value name='[CO]' />
+            <value name='[CT]' />
+            <value name='[DC]' />
+            <value name='[DE]' />
+            <value name='[FL]' />
+            <value name='[GA]' />
+            <value name='[HI]' />
+            <value name='[IA]' />
+            <value name='[ID]' />
+            <value name='[IL]' />
+            <value name='[IN]' />
+            <value name='[KS]' />
+            <value name='[KY]' />
+            <value name='[LA]' />
+            <value name='[MA]' />
+            <value name='[MD]' />
+            <value name='[ME]' />
+            <value name='[MI]' />
+            <value name='[MN]' />
+            <value name='[MO]' />
+            <value name='[MS]' />
+            <value name='[MT]' />
+            <value name='[NC]' />
+            <value name='[ND]' />
+            <value name='[NE]' />
+            <value name='[NH]' />
+            <value name='[NJ]' />
+            <value name='[NM]' />
+            <value name='[NV]' />
+            <value name='[NY]' />
+            <value name='[OH]' />
+            <value name='[OK]' />
+            <value name='[OR]' />
+            <value name='[PA]' />
+            <value name='[RI]' />
+            <value name='[SC]' />
+            <value name='[SD]' />
+            <value name='[TN]' />
+            <value name='[TX]' />
+            <value name='[US]' />
+            <value name='[UT]' />
+            <value name='[VA]' />
+            <value name='[VT]' />
+            <value name='[WA]' />
+            <value name='[WI]' />
+            <value name='[WV]' />
+            <value name='[WY]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[State Indices].[AK]' />
+              <field name='[State Indices].[AL]' />
+              <field name='[State Indices].[AR]' />
+              <field name='[State Indices].[AZ]' />
+              <field name='[State Indices].[CA]' />
+              <field name='[State Indices].[CO]' />
+              <field name='[State Indices].[CT]' />
+              <field name='[State Indices].[DC]' />
+              <field name='[State Indices].[DE]' />
+              <field name='[State Indices].[FL]' />
+              <field name='[State Indices].[GA]' />
+              <field name='[State Indices].[HI]' />
+              <field name='[State Indices].[IA]' />
+              <field name='[State Indices].[ID]' />
+              <field name='[State Indices].[IL]' />
+              <field name='[State Indices].[IN]' />
+              <field name='[State Indices].[KS]' />
+              <field name='[State Indices].[KY]' />
+              <field name='[State Indices].[LA]' />
+              <field name='[State Indices].[MA]' />
+              <field name='[State Indices].[MD]' />
+              <field name='[State Indices].[ME]' />
+              <field name='[State Indices].[MI]' />
+              <field name='[State Indices].[MN]' />
+              <field name='[State Indices].[MO]' />
+              <field name='[State Indices].[MS]' />
+              <field name='[State Indices].[MT]' />
+              <field name='[State Indices].[NC]' />
+              <field name='[State Indices].[ND]' />
+              <field name='[State Indices].[NE]' />
+              <field name='[State Indices].[NH]' />
+              <field name='[State Indices].[NJ]' />
+              <field name='[State Indices].[NM]' />
+              <field name='[State Indices].[NV]' />
+              <field name='[State Indices].[NY]' />
+              <field name='[State Indices].[OH]' />
+              <field name='[State Indices].[OK]' />
+              <field name='[State Indices].[OR]' />
+              <field name='[State Indices].[PA]' />
+              <field name='[State Indices].[RI]' />
+              <field name='[State Indices].[SC]' />
+              <field name='[State Indices].[SD]' />
+              <field name='[State Indices].[TN]' />
+              <field name='[State Indices].[TX]' />
+              <field name='[State Indices].[US]' />
+              <field name='[State Indices].[UT]' />
+              <field name='[State Indices].[VA]' />
+              <field name='[State Indices].[VT]' />
+              <field name='[State Indices].[WA]' />
+              <field name='[State Indices].[WI]' />
+              <field name='[State Indices].[WV]' />
+              <field name='[State Indices].[WY]' />
+            </group>
+          </groups>
+          <relation connection='excel-direct.0dwh4t1038mz1p12p1ha71y0fry1' name='State Indices' table='[&apos;State Indices$&apos;]' type='table'>
+            <columns gridOrigin='A1:BA511:no:A1:BA511:0' header='yes' outcome='6'>
+              <column datatype='string' name='Month' ordinal='0' />
+              <column datatype='real' name='AK' ordinal='1' />
+              <column datatype='real' name='AL' ordinal='2' />
+              <column datatype='real' name='AR' ordinal='3' />
+              <column datatype='real' name='AZ' ordinal='4' />
+              <column datatype='real' name='CA' ordinal='5' />
+              <column datatype='real' name='CO' ordinal='6' />
+              <column datatype='real' name='CT' ordinal='7' />
+              <column datatype='real' name='DC' ordinal='8' />
+              <column datatype='real' name='DE' ordinal='9' />
+              <column datatype='real' name='FL' ordinal='10' />
+              <column datatype='real' name='GA' ordinal='11' />
+              <column datatype='real' name='HI' ordinal='12' />
+              <column datatype='real' name='IA' ordinal='13' />
+              <column datatype='real' name='ID' ordinal='14' />
+              <column datatype='real' name='IL' ordinal='15' />
+              <column datatype='real' name='IN' ordinal='16' />
+              <column datatype='real' name='KS' ordinal='17' />
+              <column datatype='real' name='KY' ordinal='18' />
+              <column datatype='real' name='LA' ordinal='19' />
+              <column datatype='real' name='MA' ordinal='20' />
+              <column datatype='real' name='MD' ordinal='21' />
+              <column datatype='real' name='ME' ordinal='22' />
+              <column datatype='real' name='MI' ordinal='23' />
+              <column datatype='real' name='MN' ordinal='24' />
+              <column datatype='real' name='MO' ordinal='25' />
+              <column datatype='real' name='MS' ordinal='26' />
+              <column datatype='real' name='MT' ordinal='27' />
+              <column datatype='real' name='NC' ordinal='28' />
+              <column datatype='real' name='ND' ordinal='29' />
+              <column datatype='real' name='NE' ordinal='30' />
+              <column datatype='real' name='NH' ordinal='31' />
+              <column datatype='real' name='NJ' ordinal='32' />
+              <column datatype='real' name='NM' ordinal='33' />
+              <column datatype='real' name='NV' ordinal='34' />
+              <column datatype='real' name='NY' ordinal='35' />
+              <column datatype='real' name='OH' ordinal='36' />
+              <column datatype='real' name='OK' ordinal='37' />
+              <column datatype='real' name='OR' ordinal='38' />
+              <column datatype='real' name='PA' ordinal='39' />
+              <column datatype='real' name='RI' ordinal='40' />
+              <column datatype='real' name='SC' ordinal='41' />
+              <column datatype='real' name='SD' ordinal='42' />
+              <column datatype='real' name='TN' ordinal='43' />
+              <column datatype='real' name='TX' ordinal='44' />
+              <column datatype='real' name='UT' ordinal='45' />
+              <column datatype='real' name='VA' ordinal='46' />
+              <column datatype='real' name='VT' ordinal='47' />
+              <column datatype='real' name='WA' ordinal='48' />
+              <column datatype='real' name='WI' ordinal='49' />
+              <column datatype='real' name='WV' ordinal='50' />
+              <column datatype='real' name='WY' ordinal='51' />
+              <column datatype='real' name='US' ordinal='52' />
+            </columns>
+          </relation>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[State Indices]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[State Indices]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:BA511:no:A1:BA511:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='integer' name='[Calculation_528610046519631872]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_97671856823541760] = [Parameters].[Parameter 2] THEN 0 END' />
+      </column>
+      <column caption='SelectedDateValue' datatype='real' name='[Calculation_528610046520647682]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [Pivot Field Names] : SUM(&#13;&#10;IF [Calculation_97671856823541760] = [Parameters].[Parameter 2] THEN [Pivot Field Values] ELSE 0 END)&#13;&#10;}' />
+      </column>
+      <column caption='PriceChange%' datatype='real' name='[Calculation_528610046520795139]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([Pivot Field Values])-SUM([Calculation_528610046520647682]))/SUM([Calculation_528610046520647682])' />
+      </column>
+      <column caption='INDEX' datatype='integer' name='[Calculation_545498545141002241]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='SelectedStateLabel' datatype='real' name='[Calculation_545498545146585094]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ATTR([Pivot Field Names]) = [Parameters].[Parameter 1] THEN [Calculation_528610046520795139] ELSEIF ATTR([Pivot Field Names]) = &apos;US&apos; THEN [Calculation_528610046520795139] END' />
+      </column>
+      <column caption='Intersection' datatype='real' name='[Calculation_545498545147006983]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] AND [Calculation_97671856823541760] = [Parameters].[Parameter 2] THEN 0.00 END' />
+      </column>
+      <column caption='StateParameterTitle' datatype='string' name='[Calculation_545498545149149193]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <column caption='Calculation3' datatype='real' name='[Calculation_545498545149280266]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='' />
+      </column>
+      <column caption='PriceChangeTitle' datatype='real' default-format='*+0.0%;-0.0%' name='[Calculation_545498545149370379]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ATTR([Pivot Field Names]) = [Parameters].[Parameter 1] THEN LOOKUP([Calculation_528610046520795139],LAST()) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='PriceChangeTooltip' datatype='real' name='[Calculation_545498545150255116]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_528610046520795139]' />
+      </column>
+      <column caption='Month-Year' datatype='date' default-format='*MMMM YYYY' name='[Calculation_97671856823541760]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE([Month - Split 1],[Month - Split 2],1)' />
+      </column>
+      <column caption='SelectedState' datatype='string' name='[Calculation_97671856824389634]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] THEN &apos;StateSelected&apos;&#13;&#10;ELSEIF [Pivot Field Names] = &quot;US&quot; THEN &quot;US&quot;&#13;&#10;ELSE &quot;NotSelected&quot;&#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' caption='Year' datatype='integer' name='[Month - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[Month]'>
+        <calculation class='tableau' formula='INT( SPLIT( [Month], &quot;M&quot;, 1 ) )' />
+      </column>
+      <column aggregation='Sum' caption='Month' datatype='integer' name='[Month - Split 2]' role='dimension' type='ordinal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[Month]'>
+        <calculation class='tableau' formula='INT( SPLIT( [Month], &quot;M&quot;, 2 ) )' />
+      </column>
+      <column caption='Key' datatype='string' name='[Month]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='State' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column datatype='real' name='[SelectedDateValue (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(&#13;&#10;IF [Calculation_97671856823541760] = [Parameters].[Parameter 2] THEN [Pivot Field Values] ELSE 0 END)' />
+      </column>
+      <column caption='SelectedStateTitle' datatype='string' name='[SelectedState (copy 2)]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] THEN [Pivot Field Names]&#13;&#10;END' />
+      </column>
+      <column caption='SelectedSize' datatype='integer' name='[SelectedState (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] THEN 5&#13;&#10;ELSEIF [Pivot Field Names] = &quot;US&quot; THEN 3&#13;&#10;ELSE 1&#13;&#10;END' />
+      </column>
+      <column-instance column='[Calculation_97671856824389634]' derivation='Attribute' name='[attr:Calculation_97671856824389634:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_97671856824389634]' derivation='None' name='[none:Calculation_97671856824389634:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_545498545147006983]' derivation='Sum' name='[sum:Calculation_545498545147006983:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_528610046520795139]' derivation='User' name='[usr:Calculation_528610046520795139:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='E:/Dropbox/Analytics/Tableau Development/data/State Indices (Freddie Mac).tde' schema='Extract' tablename='Extract' update-time='08/18/2017 11:52:38 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Calculation_97671856823541760]' formula='MAKEDATE([Month - Split 1],[Month - Split 2],1)' />
+            <calculation column='[Month - Split 1]' formula='INT( SPLIT( [Month], &quot;M&quot;, 1 ) )' />
+            <calculation column='[Month - Split 2]' formula='INT( SPLIT( [Month], &quot;M&quot;, 2 ) )' />
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='26520' timestamp-start='2017-08-18 23:52:38.425' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Calculation_97671856823541760</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Calculation_97671856823541760]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Calculation_97671856823541760</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>510</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#1975-01-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2017-06-01#</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='Median' datatype='date'>#1996-04-01#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month - Split 1</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Month - Split 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month - Split 1</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>52927368.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1995.7529411764706</statistic>
+                <statistic aggregation='Min' datatype='integer'>1975</statistic>
+                <statistic aggregation='Max' datatype='integer'>2017</statistic>
+                <statistic aggregation='Stdev' datatype='real'>12.270622188065456</statistic>
+                <statistic aggregation='StdevP' datatype='real'>12.270390839312372</statistic>
+                <statistic aggregation='Var' datatype='real'>150.56816888224427</statistic>
+                <statistic aggregation='VarP' datatype='real'>150.56249134948098</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='Median' datatype='integer'>1996</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>105633943272.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month - Split 2</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Month - Split 2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month - Split 2</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>171444.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>6.4647058823529413</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>12</statistic>
+                <statistic aggregation='Stdev' datatype='real'>3.4519371819751896</statistic>
+                <statistic aggregation='StdevP' datatype='real'>3.4518720995897549</statistic>
+                <statistic aggregation='Var' datatype='real'>11.915870308302814</statistic>
+                <statistic aggregation='VarP' datatype='real'>11.915420991926183</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1424332.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>3</ordinal>
+              <family>State Indices</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>510</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;1975M01&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;2017M06&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;1996M04&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>26520.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>26520.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>52</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='binary' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AK&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;WY&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;MT&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Pivot</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26469</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>2435167.3096171548</statistic>
+                <statistic aggregation='Avg' datatype='real'>91.823805038354251</statistic>
+                <statistic aggregation='Min' datatype='real'>15.592823693</statistic>
+                <statistic aggregation='Max' datatype='real'>348.50933600000002</statistic>
+                <statistic aggregation='Stdev' datatype='real'>44.389294118723747</statistic>
+                <statistic aggregation='StdevP' datatype='real'>44.388457208607278</statistic>
+                <statistic aggregation='Var' datatype='real'>1970.4094323585628</statistic>
+                <statistic aggregation='VarP' datatype='real'>1970.3351333603591</statistic>
+                <statistic aggregation='Count' datatype='integer'>26520</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>275859616.01077598</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.32342' measure-ordering='alphabetic' measure-percentage='0.438662' parameter-percentage='0.237918' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_97671856824389634:nk]' type='palette'>
+            <map to='#000000'>
+              <bucket>&quot;US&quot;</bucket>
+            </map>
+            <map to='#3b6f84'>
+              <bucket>&quot;StateSelected&quot;</bucket>
+            </map>
+            <map to='#d3d3d3'>
+              <bucket>&quot;NotSelected&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Calculation_97671856824389634:nk]' type='palette'>
+            <map to='#000000'>
+              <bucket>&quot;US&quot;</bucket>
+            </map>
+            <map to='#3b6f84'>
+              <bucket>&quot;StateSelected&quot;</bucket>
+            </map>
+            <map to='#d3d3d3'>
+              <bucket>&quot;NotSelected&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_97671856824389634:nk]&#10;[:Measure Names]' type='palette'>
+            <map to='#000000'>
+              <multibucket>
+                <bucket>&quot;StateSelected&quot;</bucket>
+                <bucket>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#000000'>
+              <multibucket>
+                <bucket>&quot;US&quot;</bucket>
+                <bucket>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#3b6f84'>
+              <multibucket>
+                <bucket>&quot;StateSelected&quot;</bucket>
+                <bucket>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#d3d3d3'>
+              <multibucket>
+                <bucket>&quot;NotSelected&quot;</bucket>
+                <bucket>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#d3d3d3'>
+              <multibucket>
+                <bucket>&quot;NotSelected&quot;</bucket>
+                <bucket>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#d3d3d3'>
+              <multibucket>
+                <bucket>&quot;US&quot;</bucket>
+                <bucket>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='StateParameter' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;OH&quot;'>
+          <calculation class='tableau' formula='&quot;OH&quot;' />
+        </column>
+        <column caption='DateParameter' datatype='date' default-format='*MMMM YYYY' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='#2012-08-01#'>
+          <calculation class='tableau' formula='#2012-08-01#' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Relative to </run>
+            <run bold='true' fontalignment='1' fontcolor='#3b6f84'>&lt;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_545498545149149193:nk]&gt;</run>
+            <run fontalignment='1'> house prices in </run>
+            <run bold='true' fontalignment='1'>&lt;[Parameters].[Parameter 2]&gt;</run>
+            <run fontalignment='1'>, homes have changed </run>
+            <run bold='true' fontalignment='1' fontcolor='#3b6f84'>&lt;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545149370379:qk]&gt;</run>
+            <run bold='true' fontalignment='1'>.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='State Indices (Freddie Mac)' name='federated.1rn60ma0sfp6d216uouo20c9i4v6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='StateParameter' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;OH&quot;'>
+              <calculation class='tableau' formula='&quot;OH&quot;' />
+            </column>
+            <column caption='DateParameter' datatype='date' default-format='*MMMM YYYY' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='#2012-08-01#'>
+              <calculation class='tableau' formula='#2012-08-01#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1rn60ma0sfp6d216uouo20c9i4v6'>
+            <column caption='SelectedDateValue' datatype='real' name='[Calculation_528610046520647682]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [Pivot Field Names] : SUM(&#13;&#10;IF [Calculation_97671856823541760] = [Parameters].[Parameter 2] THEN [Pivot Field Values] ELSE 0 END)&#13;&#10;}' />
+            </column>
+            <column caption='PriceChange%' datatype='real' name='[Calculation_528610046520795139]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([Pivot Field Values])-SUM([Calculation_528610046520647682]))/SUM([Calculation_528610046520647682])' />
+            </column>
+            <column caption='SelectedStateLabel' datatype='real' name='[Calculation_545498545146585094]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF ATTR([Pivot Field Names]) = [Parameters].[Parameter 1] THEN [Calculation_528610046520795139] ELSEIF ATTR([Pivot Field Names]) = &apos;US&apos; THEN [Calculation_528610046520795139] END' />
+            </column>
+            <column caption='Intersection' datatype='real' name='[Calculation_545498545147006983]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] AND [Calculation_97671856823541760] = [Parameters].[Parameter 2] THEN 0.00 END' />
+            </column>
+            <column caption='StateParameterTitle' datatype='string' name='[Calculation_545498545149149193]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <column caption='PriceChangeTitle' datatype='real' default-format='*+0.0%;-0.0%' name='[Calculation_545498545149370379]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF ATTR([Pivot Field Names]) = [Parameters].[Parameter 1] THEN LOOKUP([Calculation_528610046520795139],LAST()) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='PriceChangeTooltip' datatype='real' name='[Calculation_545498545150255116]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_528610046520795139]' />
+            </column>
+            <column caption='Month-Year' datatype='date' default-format='*MMMM YYYY' name='[Calculation_97671856823541760]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE([Month - Split 1],[Month - Split 2],1)' />
+            </column>
+            <column caption='SelectedState' datatype='string' name='[Calculation_97671856824389634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] THEN &apos;StateSelected&apos;&#13;&#10;ELSEIF [Pivot Field Names] = &quot;US&quot; THEN &quot;US&quot;&#13;&#10;ELSE &quot;NotSelected&quot;&#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Year' datatype='integer' name='[Month - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[Month]'>
+              <calculation class='tableau' formula='INT( SPLIT( [Month], &quot;M&quot;, 1 ) )' />
+            </column>
+            <column aggregation='Sum' caption='Month' datatype='integer' name='[Month - Split 2]' role='dimension' type='ordinal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[Month]'>
+              <calculation class='tableau' formula='INT( SPLIT( [Month], &quot;M&quot;, 2 ) )' />
+            </column>
+            <column caption='Key' datatype='string' name='[Month]' role='dimension' type='nominal' />
+            <column caption='State' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='SelectedStateTitle' datatype='string' name='[SelectedState (copy 2)]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] THEN [Pivot Field Names]&#13;&#10;END' />
+            </column>
+            <column caption='SelectedSize' datatype='integer' name='[SelectedState (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = [Parameters].[Parameter 1] THEN 5&#13;&#10;ELSEIF [Pivot Field Names] = &quot;US&quot; THEN 3&#13;&#10;ELSE 1&#13;&#10;END' />
+            </column>
+            <column-instance column='[SelectedState (copy)]' derivation='Min' name='[min:SelectedState (copy):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_545498545149149193]' derivation='None' name='[none:Calculation_545498545149149193:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_97671856824389634]' derivation='None' name='[none:Calculation_97671856824389634:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SelectedState (copy 2)]' derivation='None' name='[none:SelectedState (copy 2):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_545498545147006983]' derivation='Sum' name='[sum:Calculation_545498545147006983:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_97671856823541760]' derivation='Month-Trunc' name='[tmn:Calculation_97671856823541760:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_528610046520795139]' derivation='User' name='[usr:Calculation_528610046520795139:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_545498545146585094]' derivation='User' name='[usr:Calculation_545498545146585094:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_545498545149370379]' derivation='User' name='[usr:Calculation_545498545149370379:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_545498545150255116]' derivation='User' name='[usr:Calculation_545498545150255116:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='manual' column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;StateSelected&quot;</bucket>
+              <bucket>&quot;US&quot;</bucket>
+              <bucket>&quot;NotSelected&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='title' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]' scope='rows' value='true' />
+            <format attr='title' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]' scope='cols' value='' />
+            <format attr='subtitle' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545146585094:qk]' value='*+0.0%; -0.0%' />
+            <format attr='text-format' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545150255116:qk]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]' value='*+0.0%;-0.0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]' value='*+0%; -0%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dotted' />
+            <format attr='stroke-size' id='refline1' value='1' />
+            <format attr='stroke-color' id='refline1' value='#898989' />
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-size' id='refline0' value='1' />
+            <format attr='stroke-color' id='refline0' value='#898989' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <reference-line axis-column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]' enable-instant-analytics='true' formula='min' id='refline1' label-type='none' scope='per-table' value-column='[Parameters].[Parameter 2]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.42779004573822021' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-labels-line-first' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]' />
+              <size column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[min:SelectedState (copy):qk]' />
+              <tooltip column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545150255116:qk]' />
+              <text column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545146585094:qk]' />
+              <lod column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Pivot Field Names:nk]' />
+              <lod column='[Parameters].[Parameter 2]' />
+              <lod column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:SelectedState (copy 2):nk]' />
+              <lod column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_545498545149149193:nk]' />
+              <lod column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545149370379:qk]' />
+              <color column='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>In &lt;</run>
+                <run bold='true'>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Pivot Field Names:nk]</run>
+                <run bold='true'>&gt;, there has been a &lt;</run>
+                <run bold='true'>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545150255116:qk]</run>
+                <run bold='true'>&gt; in the home price index in &lt;</run>
+                <run bold='true'>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]</run>
+                <run bold='true'>&gt; compared to &lt;</run>
+                <run bold='true'>[Parameters].[Parameter 2]</run>
+                <run bold='true'>&gt;.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='match' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-family' value='Tableau Semibold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='0.71364641189575195' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-labels-line-first' value='false' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4172928333282471' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-labels-line-first' value='false' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk] + [federated.1rn60ma0sfp6d216uouo20c9i4v6].[sum:Calculation_545498545147006983:qk])</rows>
+        <cols>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]</cols>
+        <mark-labels>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[min:SelectedState (copy):qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_545498545149149193:nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Pivot Field Names:nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:SelectedState (copy 2):nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]</field>
+                  <field>[Parameters].[Parameter 2]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545146585094:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545150255116:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545149370379:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5</value>
+                <value>&quot;OH&quot;</value>
+                <value>&quot;StateSelected&quot;</value>
+                <value>&quot;OH&quot;</value>
+                <value>&quot;OH&quot;</value>
+                <value>#2017-06-01 00:00:00#</value>
+                <value>#2009-02-01#</value>
+                <value>0.25863259000499056</value>
+                <value>0.25863259000499056</value>
+                <value>0.25863259000499056</value>
+                <value>0.25863259000499056</value>
+                <value>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='23' y='3' />
+          </mark-label>
+          <mark-label id='2'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[min:SelectedState (copy):qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_545498545149149193:nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Pivot Field Names:nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:SelectedState (copy 2):nk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[tmn:Calculation_97671856823541760:qk]</field>
+                  <field>[Parameters].[Parameter 2]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545146585094:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545150255116:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_545498545149370379:qk]</field>
+                  <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3</value>
+                <value>&quot;OH&quot;</value>
+                <value>&quot;US&quot;</value>
+                <value>&quot;US&quot;</value>
+                <value>%null%</value>
+                <value>#2017-06-01 00:00:00#</value>
+                <value>#2009-02-01#</value>
+                <value>0.30602288999111354</value>
+                <value>0.30602288999111354</value>
+                <value>0.30602288999111354</value>
+                <value>%null%</value>
+                <value>&quot;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[usr:Calculation_528610046520795139:qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='23' y='19' />
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='ww33'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='background-color' id='dash-text_13' value='#3b6f84' />
+          <format attr='vertical-align' id='dash-text_13' value='top' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='86875' id='5' param='horz' type='layout-flow' w='100000' x='0' y='8250'>
+            <zone h='86875' id='3' type='layout-basic' w='99600' x='0' y='8250'>
+              <zone h='80792' id='1' name='Sheet 1' w='99600' x='0' y='14333' />
+              <zone custom-title='true' h='6083' id='9' mode='compact' param='[Parameters].[Parameter 2]' type='paramctrl' w='24700' x='16600' y='8250'>
+                <formatted-text>
+                  <run>WHEN DID YOU PURCHASE?</run>
+                </formatted-text>
+              </zone>
+              <zone custom-title='true' h='6083' id='8' mode='compact' param='[Parameters].[Parameter 1]' type='paramctrl' w='25900' x='57100' y='8250'>
+                <formatted-text>
+                  <run>WHERE DID YOU BUY?</run>
+                </formatted-text>
+              </zone>
+              <zone h='6083' id='10' type='empty' w='15800' x='41300' y='8250' />
+              <zone h='6083' id='11' type='empty' w='16600' x='0' y='8250' />
+              <zone h='6083' id='12' type='empty' w='16600' x='83000' y='8250' />
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='8250' id='13' type='text' w='100000' x='0' y='0'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#ffffff' fontsize='18'>HOW HAS </run>
+              <run bold='true' fontalignment='1' fontcolor='#ffffff' fontsize='18'>YOUR HOME</run>
+              <run fontalignment='1' fontcolor='#ffffff' fontsize='18'> PRICE CHANGED SINCE YOU PURCHASED?</run>
+            </formatted-text>
+          </zone>
+          <zone forceUpdate='true' h='4875' id='14' type='text' w='36800' x='29800' y='95125'>
+            <formatted-text>
+              <run bold='true' fontalignment='1'>DESIGNED BY: </run>
+              <run fontalignment='1'>@datahasbyte</run>
+            </formatted-text>
+          </zone>
+          <zone forceUpdate='true' h='4875' id='15' type='text' w='29800' x='0' y='95125'>
+            <formatted-text>
+              <run bold='true'>SOURCE: </run>
+              <run>FREDDIE MAC</run>
+            </formatted-text>
+          </zone>
+          <zone forceUpdate='true' h='4875' id='16' type='text' w='33400' x='66600' y='95125'>
+            <formatted-text>
+              <run bold='true' fontalignment='2'>INSPIRATION: </run>
+              <run fontalignment='2'>@HARRIS7CURTIS</run>
+            </formatted-text>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Tablet'>
+          <size sizing-mode='automatic' />
+        </devicelayout>
+      </devicelayouts>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='ww33'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]&#10;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview visible='true'>
+        <device is-portrait='true' name='Google Nexus 7' type='Tablet' />
+      </device-preview>
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]&#10;[federated.1rn60ma0sfp6d216uouo20c9i4v6].[:Measure Names]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card pane-specification-id='1' param='[federated.1rn60ma0sfp6d216uouo20c9i4v6].[min:SelectedState (copy):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[:Measure Names]</field>
+            <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_545498545149149193:nk]</field>
+            <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:Calculation_97671856824389634:nk]</field>
+            <field>[federated.1rn60ma0sfp6d216uouo20c9i4v6].[none:SelectedState (copy 2):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='ww33' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

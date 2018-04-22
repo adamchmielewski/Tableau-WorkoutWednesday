@@ -1,0 +1,843 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10200.17.0216.1925                               -->
+<workbook source-build='10.2.0 (10200.17.0216.1925)' source-platform='win' version='10.2' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='WorkoutWednesday2017Week15' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='EPL Points' inline='true' name='federated.10wjy1t0ucssf014sct0w1v2o2qn' version='10.2'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='EPL Points' name='textscan.152235810r1qfk15n4lgm0z2mrnv'>
+            <connection class='textscan' directory='E:/Dropbox/Analytics/Tableau Development/data' filename='EPL Points.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.152235810r1qfk15n4lgm0z2mrnv' name='EPL Points.csv' table='[EPL Points#csv]' type='table'>
+          <columns character-set='UTF-16LE' header='yes' locale='en_US' separator='&#9;'>
+            <column datatype='integer' name='Match Day' ordinal='0' />
+            <column datatype='integer' name='Points Total' ordinal='1' />
+            <column datatype='string' name='Team Name' ordinal='2' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Match Day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Match Day]</local-name>
+            <parent-name>[EPL Points.csv]</parent-name>
+            <remote-alias>Match Day</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Points Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Points Total]</local-name>
+            <parent-name>[EPL Points.csv]</parent-name>
+            <remote-alias>Points Total</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Team Name]</local-name>
+            <parent-name>[EPL Points.csv]</parent-name>
+            <remote-alias>Team Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EPL Points.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-16LE&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\\t&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='TableCalc' datatype='integer' name='[Calculation4]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_COUNT(IF [Calculation_893401640119914506] = SUM([Points Total]) THEN 1 END)'>
+          <table-calc ordering-field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Team Name]' ordering-type='Field' />
+        </calculation>
+      </column>
+      <column caption='Lod1' datatype='integer' name='[Calculation_893401640115761155]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [Match Day] : Max([Points Total]) }' />
+      </column>
+      <column caption='Lod2' datatype='integer' name='[Calculation_893401640116002820]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_893401640115761155] = [Points Total] THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='TableMax' datatype='integer' name='[Calculation_893401640119914506]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_MAX(Sum([Points Total]) )'>
+          <table-calc level-break='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Team Name]' ordering-type='Field'>
+            <order field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Match Day]' />
+            <order field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Team Name]' />
+          </table-calc>
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Match Day]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Team Name]' role='dimension' type='nominal' />
+      <column-instance column='[Team Name]' derivation='None' name='[none:Team Name:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='E:/Dropbox/Analytics/Tableau Development/data/EPL Points.tde' schema='Extract' tablename='Extract' update-time='04/13/2017 01:27:02 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='480' timestamp-start='2017-04-13 01:27:02.925' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Match Day</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Match Day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Match Day</remote-alias>
+              <ordinal>0</ordinal>
+              <family>EPL Points.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>6000.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>12.5</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>24</statistic>
+                <statistic aggregation='Stdev' datatype='real'>6.9294084495992783</statistic>
+                <statistic aggregation='StdevP' datatype='real'>6.9221865524317288</statistic>
+                <statistic aggregation='Var' datatype='real'>48.01670146137787</statistic>
+                <statistic aggregation='VarP' datatype='real'>47.916666666666664</statistic>
+                <statistic aggregation='Count' datatype='integer'>480</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>98000.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>480.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>480</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>480.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Points Total</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Points Total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Points Total</remote-alias>
+              <ordinal>2</ordinal>
+              <family>EPL Points.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>8144.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>16.966666666666665</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>50</statistic>
+                <statistic aggregation='Stdev' datatype='real'>11.349585138295261</statistic>
+                <statistic aggregation='StdevP' datatype='real'>11.337756489809712</statistic>
+                <statistic aggregation='Var' datatype='real'>128.81308281141267</statistic>
+                <statistic aggregation='VarP' datatype='real'>128.54472222222222</statistic>
+                <statistic aggregation='Count' datatype='integer'>480</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>199878.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Team Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Team Name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>EPL Points.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Arsenal&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;West Ham United&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>480</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Newcastle United&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.501006' measure-ordering='alphabetic' measure-percentage='0.498994' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Team Name:nk]' type='palette'>
+            <map to='#0053a0'>
+              <bucket>&quot;Leicester City&quot;</bucket>
+            </map>
+            <map to='#1b458f'>
+              <bucket>&quot;Crystal Palace&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Bournemouth&quot;</bucket>
+            </map>
+            <map to='#60223b'>
+              <bucket>&quot;West Ham United&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Norwich City&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Chelsea&quot;</bucket>
+            </map>
+            <map to='#8ccce5'>
+              <bucket>&quot;Aston Villa&quot;</bucket>
+            </map>
+            <map to='#98c5e9'>
+              <bucket>&quot;Manchester City&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Watford&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Swansea City&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Southampton&quot;</bucket>
+            </map>
+            <map to='#d00027'>
+              <bucket>&quot;Liverpool&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Stoke City&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Tottenham Hotspur&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;West Bromwich Albion&quot;</bucket>
+            </map>
+            <map to='#da020e'>
+              <bucket>&quot;Manchester United&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Everton&quot;</bucket>
+            </map>
+            <map to='#ef0107'>
+              <bucket>&quot;Arsenal&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Sunderland&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Newcastle United&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight1' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 1' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Team Name' />
+        <param name='target' value='Sheet 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>How many times has a team been top of the Premier League?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EPL Points' name='federated.10wjy1t0ucssf014sct0w1v2o2qn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10wjy1t0ucssf014sct0w1v2o2qn'>
+            <column caption='TableCalc' datatype='integer' name='[Calculation4]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_COUNT(IF [Calculation_893401640119914506] = SUM([Points Total]) THEN 1 END)'>
+                <table-calc ordering-field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Team Name]' ordering-type='Field' />
+              </calculation>
+            </column>
+            <column caption='Lod1' datatype='integer' name='[Calculation_893401640115761155]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [Match Day] : Max([Points Total]) }' />
+            </column>
+            <column caption='Lod2' datatype='integer' name='[Calculation_893401640116002820]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_893401640115761155] = [Points Total] THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='TableMax' datatype='integer' name='[Calculation_893401640119914506]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_MAX(Sum([Points Total]) )'>
+                <table-calc level-break='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Team Name]' ordering-type='Field'>
+                  <order field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Match Day]' />
+                  <order field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Team Name]' />
+                </table-calc>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Match Day]' role='dimension' type='quantitative' />
+            <column datatype='integer' name='[Points Total]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Team Name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_893401640116002820]' derivation='None' name='[none:Calculation_893401640116002820:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Match Day]' derivation='None' name='[none:Match Day:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Name]' derivation='None' name='[none:Team Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_893401640116002820]' derivation='Sum' name='[sum:Calculation_893401640116002820:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation4]' derivation='User' name='[usr:Calculation4:qk:22]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Match Day]' ordering-type='Field' />
+              <table-calc field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Calculation_893401640119914506]' ordering-field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[Match Day]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Calculation_893401640116002820:qk]' included-values='in-range'>
+            <min>1</min>
+          </filter>
+          <sort class='manual' column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Leicester City&quot;</bucket>
+              <bucket>&quot;Manchester City&quot;</bucket>
+              <bucket>&quot;Arsenal&quot;</bucket>
+              <bucket>&quot;Manchester United&quot;</bucket>
+              <bucket>&quot;Liverpool&quot;</bucket>
+              <bucket>&quot;Aston Villa&quot;</bucket>
+              <bucket>&quot;Crystal Palace&quot;</bucket>
+              <bucket>&quot;West Ham United&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Calculation_893401640116002820:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' value='20' />
+            <format attr='height' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' value='20' />
+            <encoding attr='space' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' field-type='quantitative' major-show='false' minor-show='false' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='' />
+            <format attr='subtitle' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='true' />
+            <encoding attr='space' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' field-type='quantitative' major-show='false' minor-show='false' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='' />
+            <format attr='subtitle' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='true' />
+            <encoding attr='space' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' field-type='quantitative' fold='true' major-show='false' minor-show='false' scope='cols' synchronized='true' type='space' />
+            <format attr='title' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='Level of Detail' />
+            <format attr='subtitle' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='true' />
+            <format attr='display' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='true' />
+            <encoding attr='space' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' field-type='quantitative' fold='true' major-show='false' minor-show='false' scope='cols' synchronized='true' type='space' />
+            <format attr='title' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='Table Calculation' />
+            <format attr='subtitle' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='1' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' scope='cols' value='true' />
+            <format attr='border-color' value='#b0b0b0' />
+            <format attr='border-width' value='1' />
+            <format attr='hnaxis' value='false' />
+            <format attr='hnlabel' value='horizontal' />
+            <format attr='tick-color' value='#f5f5f5' />
+            <format attr='tick-color' scope='rows' value='#f5f5f5' />
+            <format attr='tick-color' scope='cols' value='#f5f5f5' />
+            <format attr='render-fold-reversed' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='250' />
+            <format attr='height' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' value='48' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' value='140' />
+            <format attr='height-header' value='14' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='col-levels' value='2' />
+            <format attr='row-levels' value='2' />
+            <format attr='row-horiz-levels' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='text-align' id='refline0' value='right' />
+            <format attr='vertical-align' id='refline0' value='center' />
+            <format attr='line-visibility' id='refline0' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' enable-instant-analytics='false' formula='sum' id='refline0' label-type='value' scope='per-cell' value-column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0053a0' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' x-axis-name='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' />
+              <text column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#0053a0' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' x-axis-name='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' />
+              <lod column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Match Day:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-range-field' value='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Match Day:qk]' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0053a0' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' x-axis-name='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0053a0' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' x-axis-name='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]' />
+              <lod column='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Match Day:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0053a0' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='325' />
+                <format attr='maxwidth' value='325' />
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]</rows>
+        <cols>([federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk] + ([federated.10wjy1t0ucssf014sct0w1v2o2qn].[sum:Calculation_893401640116002820:qk] + ([federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22] + [federated.10wjy1t0ucssf014sct0w1v2o2qn].[usr:Calculation4:qk:22])))</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='860' minwidth='650' preset-index='5' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='5' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='3' type='layout-basic' w='99385' x='0' y='0'>
+              <zone h='100000' id='1' name='Sheet 1' w='99385' x='0' y='0' />
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Phone'>
+          <size sizing-mode='automatic' />
+        </devicelayout>
+      </devicelayouts>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview visible='true'>
+        <device name='iPhone 6s' type='Phone' />
+      </device-preview>
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Calculation_893401640116002820:qk]</field>
+            <field>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Calculation_893401640123207700:qk]</field>
+            <field>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Calculation_893401640123244566:qk]</field>
+            <field>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Match Day:qk]</field>
+            <field>[federated.10wjy1t0ucssf014sct0w1v2o2qn].[none:Team Name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      P1oPoSFhdhLwAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

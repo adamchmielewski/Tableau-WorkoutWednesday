@@ -1,0 +1,1089 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0728.2252                               -->
+<workbook original-version='10.3' source-build='10.3.2 (10300.17.0728.2252)' source-platform='win' version='10.3' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='WorkoutWednesday2017Week36' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.3'>
+      <aliases enabled='yes' />
+      <column caption='DriveMins_Param' datatype='integer' name='[Avg RepTime Parameter]' param-domain-type='any' role='measure' type='quantitative' value='90'>
+        <calculation class='tableau' formula='90' />
+      </column>
+    </datasource>
+    <datasource caption='Airport_travel_time' inline='true' name='federated.1yk3ia603e50r71dehtlh0si0agg' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Airport_travel_time' name='textscan.0i7pamd0viwh1m11io6ks0kwn75r'>
+            <connection class='textscan' directory='E:/Dropbox/Analytics/Tableau Development/data' filename='Airport_travel_time.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0i7pamd0viwh1m11io6ks0kwn75r' name='Airport_travel_time.csv' table='[Airport_travel_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='LAD16NM' ordinal='0' />
+            <column datatype='string' name='AirportName' ordinal='1' />
+            <column datatype='string' name='Time of Day' ordinal='2' />
+            <column datatype='real' name='Avg_RepTime' ordinal='3' />
+            <column datatype='integer' name='Avg_AggregatedWeeklyDirectDestinations2011' ordinal='4' />
+            <column datatype='real' name='Avg_AggregatedTerminalPassengers2011(&apos;000)' ordinal='5' />
+            <column datatype='integer' name='Avg_AggregatedWeeklyDirectDestinations2013' ordinal='6' />
+            <column datatype='real' name='Avg_AggregatedTerminalPassengers2013(&apos;000)' ordinal='7' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>LAD16NM</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LAD16NM]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>LAD16NM</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirportName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AirportName]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>AirportName</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time of Day</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Time of Day]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>Time of Day</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_RepTime</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg_RepTime]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>Avg_RepTime</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_AggregatedWeeklyDirectDestinations2011</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg_AggregatedWeeklyDirectDestinations2011]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>Avg_AggregatedWeeklyDirectDestinations2011</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_AggregatedTerminalPassengers2011(&apos;000)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg_AggregatedTerminalPassengers2011(&apos;000)]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>Avg_AggregatedTerminalPassengers2011(&apos;000)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_AggregatedWeeklyDirectDestinations2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg_AggregatedWeeklyDirectDestinations2013]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>Avg_AggregatedWeeklyDirectDestinations2013</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_AggregatedTerminalPassengers2013(&apos;000)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg_AggregatedTerminalPassengers2013(&apos;000)]</local-name>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias>Avg_AggregatedTerminalPassengers2013(&apos;000)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Airport_travel_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Airport Name' datatype='string' name='[AirportName]' role='dimension' type='nominal' />
+      <column caption='Avg AggregatedTerminalPassengers2011(&apos;000)' datatype='real' name='[Avg_AggregatedTerminalPassengers2011(&apos;000)]' role='measure' type='quantitative' />
+      <column caption='Avg AggregatedTerminalPassengers2013(&apos;000)' datatype='real' name='[Avg_AggregatedTerminalPassengers2013(&apos;000)]' role='measure' type='quantitative' />
+      <column caption='Avg AggregatedWeeklyDirectDestinations2011' datatype='integer' name='[Avg_AggregatedWeeklyDirectDestinations2011]' role='measure' type='quantitative' />
+      <column caption='Avg AggregatedWeeklyDirectDestinations2013' datatype='integer' name='[Avg_AggregatedWeeklyDirectDestinations2013]' role='measure' type='quantitative' />
+      <column caption='Avg RepTime' datatype='real' name='[Avg_RepTime]' role='measure' type='quantitative' />
+      <column caption='Weekly Sum' datatype='integer' name='[Calculation_1110700305790717952]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Avg_AggregatedWeeklyDirectDestinations2013])' />
+      </column>
+      <column caption='DriveMins_Set' datatype='string' name='[Calculation_1110700305792061441]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF SUM([Calculation_1110700305795686404]) &lt;= MIN([Parameters].[Avg RepTime Parameter]) THEN &apos;In Range&apos; ELSE &apos;Out of Range&apos; END' />
+      </column>
+      <column aggregation='Attribute' caption='@Width' datatype='real' name='[Calculation_1110700305795686404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{EXCLUDE: AVG([Avg_RepTime])}' />
+      </column>
+      <column caption='@RightStartPoint' datatype='real' name='[Calculation_1110700305795825669]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF FIRST()==0 THEN &#13;&#10;    MIN([Calculation_1110700305795686404])&#13;&#10;ELSEIF MIN([AirportName]) != LOOKUP(MIN([AirportName]),-1) THEN&#13;&#10;    PREVIOUS_VALUE(0) + MIN([Calculation_1110700305795686404]) &#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='ClosestAirport' datatype='string' name='[Calculation_1110700305802850310]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1110700305804353547] = MIN([Calculation_1110700305810112525]) &#13;&#10;THEN ATTR([AirportName]) END' />
+      </column>
+      <column caption='INDEX' datatype='integer' name='[Calculation_1110700305803472904]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='DriveTime' datatype='real' name='[Calculation_1110700305804353547]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='MIN({FIXED [LAD16NM], [AirportName] : AVG([Avg_RepTime])})' />
+      </column>
+      <column caption='Title ' datatype='string' name='[Calculation_1110700305806815244]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='&quot;If travelling from &quot; &#13;&#10;+&#13;&#10;ATTR([LAD16NM])&#13;&#10;+&#13;&#10;&quot;, your shortest journey would be to &quot;&#13;&#10;+[Calculation_1110700305802850310]&#13;&#10;+&quot; airport.&quot;' />
+      </column>
+      <column aggregation='Attribute' caption='Min Time' datatype='real' name='[Calculation_1110700305810112525]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ EXCLUDE [AirportName] : &#13;&#10;(MIN({ FIXED [LAD16NM],[AirportName] : AVG([Avg_RepTime])}))&#13;&#10;}' />
+      </column>
+      <column caption='Lad16Nm' datatype='string' name='[LAD16NM]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Calculation_1110700305792061441]' derivation='User' name='[usr:Calculation_1110700305792061441:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='E:/Dropbox/Analytics/Tableau Development/data/Airport_travel_time.tde' schema='Extract' tablename='Extract' update-time='09/08/2017 01:47:38 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='39444' timestamp-start='2017-09-08 01:47:38.310' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>AirportName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AirportName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AirportName</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>38</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Aberdeen&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Stansted&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_AggregatedTerminalPassengers2011(&apos;000)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg_AggregatedTerminalPassengers2011(&apos;000)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_AggregatedTerminalPassengers2011(&apos;000)</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>149</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.00063399999999999698</statistic>
+                <statistic aggregation='Max' datatype='real'>69.390591000000299</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_AggregatedTerminalPassengers2013(&apos;000)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg_AggregatedTerminalPassengers2013(&apos;000)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_AggregatedTerminalPassengers2013(&apos;000)</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>148</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.00073199999999999708</statistic>
+                <statistic aggregation='Max' datatype='real'>72.331690000000407</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_AggregatedWeeklyDirectDestinations2011</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Avg_AggregatedWeeklyDirectDestinations2011]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_AggregatedWeeklyDirectDestinations2011</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>187</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_AggregatedWeeklyDirectDestinations2013</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Avg_AggregatedWeeklyDirectDestinations2013]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_AggregatedWeeklyDirectDestinations2013</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>177</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_RepTime</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg_RepTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_RepTime</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>38075</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>8323111.4557175711</statistic>
+                <statistic aggregation='Avg' datatype='real'>211.01083702762324</statistic>
+                <statistic aggregation='Min' datatype='real'>7.6691522768565603</statistic>
+                <statistic aggregation='Max' datatype='real'>718.16833477138698</statistic>
+                <statistic aggregation='Stdev' datatype='real'>125.63969290090841</statistic>
+                <statistic aggregation='StdevP' datatype='real'>125.63810025704335</statistic>
+                <statistic aggregation='Var' datatype='real'>15785.332432234578</statistic>
+                <statistic aggregation='VarP' datatype='real'>15784.932236198874</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2378887582.0697927</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAD16NM</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LAD16NM]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LAD16NM</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>346</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Adur&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;York&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Merthyr Tydfil&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>7</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>39444.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>39444.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Time of Day</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Time of Day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Time of Day</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Airport_travel_time.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AM&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;PM&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>39444</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Mid&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.324659' measure-ordering='alphabetic' measure-percentage='0.522924' parameter-percentage='0.152416' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_1110700305792061441:nk]' type='palette'>
+            <map to='#a3ced5'>
+              <bucket>&quot;In Range&quot;</bucket>
+            </map>
+            <map to='#c7bfbc'>
+              <bucket>&quot;Out of Range&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='DriveMins_Param' datatype='integer' name='[Avg RepTime Parameter]' param-domain-type='any' role='measure' type='quantitative' value='90'>
+          <calculation class='tableau' formula='90' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Title'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airport_travel_time' name='federated.1yk3ia603e50r71dehtlh0si0agg' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='DriveMins_Param' datatype='integer' name='[Avg RepTime Parameter]' param-domain-type='any' role='measure' type='quantitative' value='90'>
+              <calculation class='tableau' formula='90' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1yk3ia603e50r71dehtlh0si0agg'>
+            <column caption='Airport Name' datatype='string' name='[AirportName]' role='dimension' type='nominal' />
+            <column caption='Avg RepTime' datatype='real' name='[Avg_RepTime]' role='measure' type='quantitative' />
+            <column caption='ClosestAirport' datatype='string' name='[Calculation_1110700305802850310]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1110700305804353547] = MIN([Calculation_1110700305810112525]) &#13;&#10;THEN ATTR([AirportName]) END' />
+            </column>
+            <column caption='DriveTime' datatype='real' name='[Calculation_1110700305804353547]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='MIN({FIXED [LAD16NM], [AirportName] : AVG([Avg_RepTime])})' />
+            </column>
+            <column caption='Title ' datatype='string' name='[Calculation_1110700305806815244]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='&quot;If travelling from &quot; &#13;&#10;+&#13;&#10;ATTR([LAD16NM])&#13;&#10;+&#13;&#10;&quot;, your shortest journey would be to &quot;&#13;&#10;+[Calculation_1110700305802850310]&#13;&#10;+&quot; airport.&quot;' />
+            </column>
+            <column aggregation='Attribute' caption='Min Time' datatype='real' name='[Calculation_1110700305810112525]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ EXCLUDE [AirportName] : &#13;&#10;(MIN({ FIXED [LAD16NM],[AirportName] : AVG([Avg_RepTime])}))&#13;&#10;}' />
+            </column>
+            <column caption='Lad16Nm' datatype='string' name='[LAD16NM]' role='dimension' type='nominal' />
+            <column-instance column='[AirportName]' derivation='None' name='[none:AirportName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LAD16NM]' derivation='None' name='[none:LAD16NM:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1110700305806815244]' derivation='User' name='[usr:Calculation_1110700305806815244:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:LAD16NM:nk]' member='&quot;Telford and Wrekin&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='777' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' value='Select your area' />
+          </style-rule>
+          <style-rule element='parameter-ctrl'>
+            <format attr='title' field='[Parameters].[Avg RepTime Parameter]' value='How many minutes do you want to drive for?' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <lod column='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]' />
+              <text column='[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305806815244:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='12'>&lt;</run>
+                <run bold='true' fontsize='12'>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305806815244:nk]</run>
+                <run bold='true' fontsize='12'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='WW36'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Which airport should you fly from?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airport_travel_time' name='federated.1yk3ia603e50r71dehtlh0si0agg' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='DriveMins_Param' datatype='integer' name='[Avg RepTime Parameter]' param-domain-type='any' role='measure' type='quantitative' value='90'>
+              <calculation class='tableau' formula='90' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1yk3ia603e50r71dehtlh0si0agg'>
+            <column caption='Airport Name' datatype='string' name='[AirportName]' role='dimension' type='nominal' />
+            <column caption='Avg AggregatedWeeklyDirectDestinations2013' datatype='integer' name='[Avg_AggregatedWeeklyDirectDestinations2013]' role='measure' type='quantitative' />
+            <column caption='Avg RepTime' datatype='real' name='[Avg_RepTime]' role='measure' type='quantitative' />
+            <column caption='Weekly Sum' datatype='integer' name='[Calculation_1110700305790717952]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Avg_AggregatedWeeklyDirectDestinations2013])' />
+            </column>
+            <column caption='DriveMins_Set' datatype='string' name='[Calculation_1110700305792061441]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF SUM([Calculation_1110700305795686404]) &lt;= MIN([Parameters].[Avg RepTime Parameter]) THEN &apos;In Range&apos; ELSE &apos;Out of Range&apos; END' />
+            </column>
+            <column aggregation='Attribute' caption='@Width' datatype='real' name='[Calculation_1110700305795686404]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{EXCLUDE: AVG([Avg_RepTime])}' />
+            </column>
+            <column caption='@RightStartPoint' datatype='real' name='[Calculation_1110700305795825669]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF FIRST()==0 THEN &#13;&#10;    MIN([Calculation_1110700305795686404])&#13;&#10;ELSEIF MIN([AirportName]) != LOOKUP(MIN([AirportName]),-1) THEN&#13;&#10;    PREVIOUS_VALUE(0) + MIN([Calculation_1110700305795686404]) &#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Lad16Nm' datatype='string' name='[LAD16NM]' role='dimension' type='nominal' />
+            <column-instance column='[AirportName]' derivation='None' name='[none:AirportName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LAD16NM]' derivation='None' name='[none:LAD16NM:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg_AggregatedWeeklyDirectDestinations2013]' derivation='Sum' name='[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1110700305795686404]' derivation='Sum' name='[sum:Calculation_1110700305795686404:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1110700305790717952]' derivation='User' name='[usr:Calculation_1110700305790717952:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1110700305792061441]' derivation='User' name='[usr:Calculation_1110700305792061441:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1110700305795825669]' derivation='User' name='[usr:Calculation_1110700305795825669:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1yk3ia603e50r71dehtlh0si0agg].[AirportName]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]' direction='ASC' using='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Calculation_1110700305795686404:qk]' />
+          <filter class='categorical' column='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:LAD16NM:nk]' member='&quot;Telford and Wrekin&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' included-values='in-range'>
+            <min>100</min>
+          </filter>
+          <slices>
+            <column>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]</column>
+            <column>[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' field-type='quantitative' major-origin='0' major-spacing='100' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' scope='rows' value='Weekly Direct Destinations' />
+            <format attr='subtitle' class='0' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305795825669:qk:2]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' value='Select your area' />
+          </style-rule>
+          <style-rule element='parameter-ctrl'>
+            <format attr='title' field='[Parameters].[Avg RepTime Parameter]' value='How many minutes do you want to drive for?' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-right' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305792061441:nk]' />
+              <lod column='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]' />
+              <lod column='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]' />
+              <lod column='[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305790717952:qk]' />
+              <size column='[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Calculation_1110700305795686404:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' indent='6930'>If you drove to &lt;</run>
+                <run bold='true' indent='6930'>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]</run>
+                <run bold='true' indent='6930'>&gt; it would take you &lt;</run>
+                <run bold='true' indent='6930'>[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Calculation_1110700305795686404:qk]</run>
+                <run bold='true' indent='6930'>&gt; minutes. You could fly to &lt;</run>
+                <run bold='true' indent='6930'>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305790717952:qk]</run>
+                <run bold='true' indent='6930'>&gt; destinations.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Avg_AggregatedWeeklyDirectDestinations2013:qk]</rows>
+        <cols>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305795825669:qk:2]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='WW36_DB'>
+      <style />
+      <size maxheight='600' maxwidth='800' minheight='600' minwidth='800' preset-index='3' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Airport_travel_time' name='federated.1yk3ia603e50r71dehtlh0si0agg' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1yk3ia603e50r71dehtlh0si0agg'>
+        <column caption='Lad16Nm' datatype='string' name='[LAD16NM]' role='dimension' type='nominal' />
+        <column-instance column='[LAD16NM]' derivation='None' name='[none:LAD16NM:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='86625' id='5' param='horz' type='layout-flow' w='100000' x='0' y='7375'>
+            <zone h='86625' id='3' type='layout-basic' w='99500' x='0' y='7375'>
+              <zone h='71833' id='1' name='WW36' show-title='false' w='99500' x='0' y='22167' />
+              <zone h='8123' id='6' mode='dropdown' name='WW36' param='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' type='filter' w='25704' x='0' y='7375' />
+              <zone custom-title='true' h='8123' id='9' mode='type_in' param='[Parameters].[Avg RepTime Parameter]' type='paramctrl' w='49296' x='25704' y='7375'>
+                <formatted-text>
+                  <run>How many</run>
+                  <run fontcolor='#76b7b2'> minutes do you want to drive</run>
+                  <run> for?</run>
+                </formatted-text>
+              </zone>
+              <zone h='8123' id='7' name='WW36' pane-specification-id='4' param='[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305792061441:nk]' show-title='false' type='color' w='24500' x='75000' y='7375' />
+              <zone h='6669' id='14' name='Title' show-title='false' w='99500' x='0' y='15498' />
+            </zone>
+          </zone>
+          <zone h='7375' id='10' type='text' w='100000' x='0' y='0'>
+            <formatted-text>
+              <run fontcolor='#333333' fontsize='15'>Which airport should you fly from?</run>
+            </formatted-text>
+          </zone>
+          <zone h='6000' id='11' type='text' w='50000' x='0' y='94000'>
+            <formatted-text>
+              <run>Created by @EmmaWhyte for #WorkoutWednesday</run>
+            </formatted-text>
+          </zone>
+          <zone h='6000' id='12' type='text' w='25000' x='75000' y='94000'>
+            <formatted-text>
+              <run fontalignment='2'>Data from data.gov.uk</run>
+            </formatted-text>
+          </zone>
+          <zone h='6000' id='13' type='text' w='25000' x='50000' y='94000'>
+            <formatted-text>
+              <run>Recreated by @datahasbyte</run>
+            </formatted-text>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='WW36_DB'>
+      <viewpoints>
+        <viewpoint name='Title' />
+        <viewpoint name='WW36'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305792061441:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='Title'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' type='filter' />
+            <card custom-title='true' mode='type_in' param='[Parameters].[Avg RepTime Parameter]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:Avg_AggregatedWeeklyDirectDestinations2013:qk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:Avg_RepTime:qk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[sum:Calculation_1110700305804353547:ok]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305792061441:nk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305802850310:nk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305804353547:ok]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305806815244:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='WW36'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]' type='filter' />
+            <card param='[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]' type='highlighter' />
+            <card custom-title='true' mode='type_in' param='[Parameters].[Avg RepTime Parameter]' type='parameter' />
+            <card pane-specification-id='4' param='[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305792061441:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:AirportName:nk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:Avg_AggregatedWeeklyDirectDestinations2013:qk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:Avg_RepTime:qk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[none:LAD16NM:nk]</field>
+            <field>[federated.1yk3ia603e50r71dehtlh0si0agg].[usr:Calculation_1110700305792061441:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='WW36_DB' width='192'>
+      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
+      mgyA1NT+f/ZbOrL3uvh0AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

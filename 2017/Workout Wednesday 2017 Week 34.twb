@@ -1,0 +1,2254 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0728.2252                               -->
+<workbook original-version='10.3' source-build='10.3.2 (10300.17.0728.2252)' source-platform='win' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.3'>
+      <aliases enabled='yes' />
+      <column caption='Top Customers' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+        <calculation class='tableau' formula='5' />
+        <range granularity='5' max='20' min='5' />
+      </column>
+      <column caption='Profit Bin Size' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='200'>
+        <calculation class='tableau' formula='200' />
+        <range granularity='50' max='200' min='50' />
+      </column>
+    </datasource>
+    <datasource caption='MoviesByYear (BoxOfficeDistributorData)' inline='true' name='federated.1rbg9rl1282nz91939phn1ocogfx' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='MoviesByYear (BoxOfficeDistributorData)' name='textscan.07blz921tw4xvc13xsber1f4yll4'>
+            <connection class='textscan' directory='E:/Dropbox/Analytics/Tableau Development/data' filename='MoviesByYear (BoxOfficeDistributorData).csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07blz921tw4xvc13xsber1f4yll4' name='MoviesByYear (BoxOfficeDistributorData).csv' table='[MoviesByYear (BoxOfficeDistributorData)#csv]' type='table'>
+          <columns character-set='UTF-16LE' header='yes' locale='en_US' separator='&#9;'>
+            <column datatype='real' name='% of Total' ordinal='0' />
+            <column datatype='string' name='Films' ordinal='1' />
+            <column datatype='string' name='Ranked' ordinal='2' />
+            <column datatype='string' name='MovieAndYear' ordinal='3' />
+            <column datatype='string' name='Distributor' ordinal='4' />
+            <column datatype='integer' name='Gross' ordinal='5' />
+            <column datatype='string' name='Movie Title (click to view)' ordinal='6' />
+            <column datatype='integer' name='Number of Records' ordinal='7' />
+            <column datatype='date' name='Open' ordinal='8' />
+            <column datatype='integer' name='Rank' ordinal='9' />
+            <column datatype='string' name='Studio' ordinal='10' />
+            <column datatype='integer' name='Theatres' ordinal='11' />
+            <column datatype='integer' name='Total Gross' ordinal='12' />
+            <column datatype='integer' name='Year' ordinal='13' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>% of Total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[% of Total]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>% of Total</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Films</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Films]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Films</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ranked</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ranked]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Ranked</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MovieAndYear</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MovieAndYear]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>MovieAndYear</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distributor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Distributor]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Distributor</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gross]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Gross</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Movie Title (click to view)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Movie Title (click to view)]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Movie Title (click to view)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Records]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Studio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Studio]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Studio</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Theatres</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Theatres]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Theatres</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Gross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Gross]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Total Gross</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MoviesByYear (BoxOfficeDistributorData).csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-16LE&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\\t&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='20_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy 2)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;20th Century Fox&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+      </column>
+      <column caption='UN_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy 3)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Universal&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+      </column>
+      <column caption='WB_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Warner Bros.&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+      </column>
+      <column aggregation='Sum' caption='Percentage' datatype='real' name='[Calculation_671880812132052995]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='ROUND([% of Total],2)' />
+      </column>
+      <column caption='BV_calc' datatype='real' default-format='p0.0%' name='[Calculation_671880812157071378]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+      </column>
+      <column caption='Andy&apos;s Solution' datatype='real' name='[Calculation_671880812161470486]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({SUM([Gross])})' />
+      </column>
+      <column caption='Eva&apos;s Solution' datatype='real' name='[Calculation_671880812167331864]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Distributor] = &apos;Buena Vista&apos; THEN [Gross] END)&#13;&#10;/&#13;&#10;window_sum(SUM([Gross]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Movie And Year' datatype='string' name='[MovieAndYear]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec' />
+      <column aggregation='Sum' datatype='integer' name='[Rank]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='E:/Dropbox/Analytics/Tableau Development/data/MoviesByYear (BoxOfficeDistributorData).tde' schema='Extract' tablename='Extract' update-time='08/25/2017 01:04:22 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Calculation_671880812132052995]' formula='ROUND([% of Total],2)' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='943' timestamp-start='2017-08-25 01:04:22.159' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>% of Total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[% of Total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>% of Total</remote-alias>
+              <ordinal>0</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>222</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>728.99500000000012</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.77305938494167559</statistic>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>1.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.37332116583491842</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.37312316997594502</statistic>
+                <statistic aggregation='Var' datatype='real'>0.13936869286034265</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.13922089997289797</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>694.84173499999963</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Distributor</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Distributor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Distributor</remote-alias>
+              <ordinal>1</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;20th Century Fox&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Warner Bros.&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Films</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Films]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Films</remote-alias>
+              <ordinal>2</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>400</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;10 Cloverfield Lane&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Zootopia&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gross</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Gross]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gross</remote-alias>
+              <ordinal>3</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>943</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>56574014706.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>59993652.922587484</statistic>
+                <statistic aggregation='Min' datatype='integer'>1947</statistic>
+                <statistic aggregation='Max' datatype='integer'>652270625</statistic>
+                <statistic aggregation='Stdev' datatype='real'>83779111.524162635</statistic>
+                <statistic aggregation='StdevP' datatype='real'>83734678.155073702</statistic>
+                <statistic aggregation='Var' datatype='real'>7018939527778081.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>7011496325733777.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.0005922837876077e+19</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Movie Title (click to view)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Movie Title (click to view)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Movie Title (click to view)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>765</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;10 Cloverfield Lane&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Zootopia&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MovieAndYear</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MovieAndYear]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MovieAndYear</remote-alias>
+              <ordinal>5</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>943</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;201130 Minutes or Less&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;2016Zootopia&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>6</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>943.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>943.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Open</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Open]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Open</remote-alias>
+              <ordinal>7</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>378</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2006-03-03#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2016-12-25#</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='Median' datatype='date'>#2013-11-08#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rank</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Rank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rank</remote-alias>
+              <ordinal>8</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>11927.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>12.647932131495228</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>39</statistic>
+                <statistic aggregation='Stdev' datatype='real'>8.1509845619239343</statistic>
+                <statistic aggregation='StdevP' datatype='real'>8.1466615785586391</statistic>
+                <statistic aggregation='Var' datatype='real'>66.438549328722303</statistic>
+                <statistic aggregation='VarP' datatype='real'>66.368094875563543</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>213437.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ranked</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ranked]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ranked</remote-alias>
+              <ordinal>9</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;1&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Others&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Studio</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Studio]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Studio</remote-alias>
+              <ordinal>10</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;BV&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;WB (NL)&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Theatres</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Theatres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Theatres</remote-alias>
+              <ordinal>11</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>761</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>2166514.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2327.0827067669175</statistic>
+                <statistic aggregation='Min' datatype='integer'>2</statistic>
+                <statistic aggregation='Max' datatype='integer'>4404</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1379.0005117590802</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1378.2597110009413</statistic>
+                <statistic aggregation='Var' datatype='real'>1901642.4114318052</statistic>
+                <statistic aggregation='VarP' datatype='real'>1899599.8309683984</statistic>
+                <statistic aggregation='Count' datatype='integer'>931</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>6810184706.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Gross</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Total Gross]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Gross</remote-alias>
+              <ordinal>12</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>765</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>76858568822.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>81504314.763520673</statistic>
+                <statistic aggregation='Min' datatype='integer'>6690</statistic>
+                <statistic aggregation='Max' datatype='integer'>936662225</statistic>
+                <statistic aggregation='Stdev' datatype='real'>96952468.935172245</statistic>
+                <statistic aggregation='StdevP' datatype='real'>96901048.900298297</statistic>
+                <statistic aggregation='Var' datatype='real'>9399781232625538.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>9389813277978002.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.5118898906675261e+19</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>13</ordinal>
+              <family>MoviesByYear (BoxOfficeDistributorData).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1898760.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2013.5312831389183</statistic>
+                <statistic aggregation='Min' datatype='integer'>2011</statistic>
+                <statistic aggregation='Max' datatype='integer'>2016</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1.7212383667838254</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1.7203254850612819</statistic>
+                <statistic aggregation='Var' datatype='real'>2.9626615152886506</statistic>
+                <statistic aggregation='VarP' datatype='real'>2.9595197745513349</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3823215450.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Calculation_671880812132052995</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Calculation_671880812132052995]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Calculation_671880812132052995</remote-alias>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>729.17999999999984</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.77325556733828194</statistic>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>1.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.37336352823033214</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.37316550990389741</statistic>
+                <statistic aggregation='Var' datatype='real'>0.13940032421260201</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.13925249778183574</statistic>
+                <statistic aggregation='Count' datatype='integer'>943</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>695.15759999999932</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.454545' measure-ordering='alphabetic' measure-percentage='0.467532' parameter-percentage='0.0779221' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <filter class='categorical' column='[Year]' filter-group='2'>
+        <groupfilter function='member' level='[Year]' member='2016' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </datasource>
+    <datasource caption='Sheet1 (Waffle)' inline='true' name='federated.0edgpnz0p8sfxm1e951ej0sehyi3' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Waffle' name='excel-direct.10r1ven1sc3uwp157tb4d0lp9yz2'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/Dropbox/Analytics/Tableau Development/data/Waffle.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.10r1ven1sc3uwp157tb4d0lp9yz2' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C101:no:A1:C101:0' header='yes' outcome='6'>
+            <column datatype='integer' name='Row' ordinal='0' />
+            <column datatype='integer' name='Column' ordinal='1' />
+            <column datatype='real' name='Percentage' ordinal='2' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Row</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Row]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Row</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Column</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Column]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Column</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Percentage</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C101:no:A1:C101:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='20_Color' datatype='boolean' name='[BV_Color (copy 2) (copy)]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[BV_calc (copy 2)]&gt;=SUM([Percentage])' />
+      </column>
+      <column caption='UN_Color' datatype='boolean' name='[BV_Color (copy 2)]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[BV_calc (copy 3)]&gt;=SUM([Percentage])' />
+      </column>
+      <column caption='WB_Color' datatype='boolean' name='[BV_Color (copy)]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[BV_calc (copy)]&gt;=SUM([Percentage])' />
+      </column>
+      <column aggregation='Sum' caption='1' datatype='integer' name='[Calculation_671880812156739600]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='BV_Color' datatype='boolean' name='[Calculation_671880812157853715]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[Calculation_671880812157071378]&gt;=SUM([Percentage])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Column]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Row]' role='dimension' type='ordinal' />
+      <column-instance column='[BV_Color (copy 2) (copy)]' derivation='User' name='[usr:BV_Color (copy 2) (copy):nk]' pivot='key' type='nominal' />
+      <column-instance column='[BV_Color (copy 2)]' derivation='User' name='[usr:BV_Color (copy 2):nk]' pivot='key' type='nominal' />
+      <column-instance column='[BV_Color (copy)]' derivation='User' name='[usr:BV_Color (copy):nk:2]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_671880812157853715]' derivation='User' name='[usr:Calculation_671880812157853715:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='E:/Dropbox/Analytics/Tableau Development/data/Sheet1 (Waffle).tde' schema='Extract' tablename='Extract' update-time='08/25/2017 01:04:32 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='100' timestamp-start='2017-08-25 01:04:32.025' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Column</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Column]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Column</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>550.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>5.5</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>10</statistic>
+                <statistic aggregation='Stdev' datatype='real'>2.8867513459481291</statistic>
+                <statistic aggregation='StdevP' datatype='real'>2.8722813232690143</statistic>
+                <statistic aggregation='Var' datatype='real'>8.3333333333333339</statistic>
+                <statistic aggregation='VarP' datatype='real'>8.25</statistic>
+                <statistic aggregation='Count' datatype='integer'>100</statistic>
+                <statistic aggregation='Median' datatype='integer'>6</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3850.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>100.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>100</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>100.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percentage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Percentage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percentage</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>50.5</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.505</statistic>
+                <statistic aggregation='Min' datatype='real'>0.01</statistic>
+                <statistic aggregation='Max' datatype='real'>1.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.2901149197588202</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.2886607004772212</statistic>
+                <statistic aggregation='Var' datatype='real'>0.084166666666666667</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.083324999999999996</statistic>
+                <statistic aggregation='Count' datatype='integer'>100</statistic>
+                <statistic aggregation='Median' datatype='real'>0.51000000000000001</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>33.835000000000001</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Row</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Row]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Row</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>550.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>5.5</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>10</statistic>
+                <statistic aggregation='Stdev' datatype='real'>2.8867513459481291</statistic>
+                <statistic aggregation='StdevP' datatype='real'>2.8722813232690143</statistic>
+                <statistic aggregation='Var' datatype='real'>8.3333333333333339</statistic>
+                <statistic aggregation='VarP' datatype='real'>8.25</statistic>
+                <statistic aggregation='Count' datatype='integer'>100</statistic>
+                <statistic aggregation='Median' datatype='integer'>6</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3850.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.32282' measure-ordering='alphabetic' measure-percentage='0.435993' parameter-percentage='0.241187' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_671880812157853715:nk]' type='palette'>
+            <map to='#b07aa1'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#d3d3d3'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:BV_Color (copy 2) (copy):nk]' type='palette'>
+            <map to='#d3d3d3'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:BV_Color (copy):nk:2]' type='palette'>
+            <map to='#8fb202'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#d3d3d3'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:BV_Color (copy 2):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#d3d3d3'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='federated.1rbg9rl1282nz91939phn1ocogfx'>
+        <column caption='20_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy 2)]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;20th Century Fox&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+        </column>
+        <column caption='UN_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy 3)]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Universal&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+        </column>
+        <column caption='WB_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy)]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Warner Bros.&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+        </column>
+        <column caption='BV_calc' datatype='real' default-format='p0.0%' name='[Calculation_671880812157071378]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='20th Century Fox'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Waffle)' name='federated.0edgpnz0p8sfxm1e951ej0sehyi3' />
+            <datasource caption='MoviesByYear (BoxOfficeDistributorData)' name='federated.1rbg9rl1282nz91939phn1ocogfx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0edgpnz0p8sfxm1e951ej0sehyi3'>
+            <column caption='20_Color' datatype='boolean' name='[BV_Color (copy 2) (copy)]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[BV_calc (copy 2)]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='BV_Color' datatype='boolean' name='[Calculation_671880812157853715]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[Calculation_671880812157071378]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='AVG(1)' datatype='real' name='[Calculation_671880812168118297]' role='measure' type='quantitative' user:unnamed='Buena Vista (Disney)'>
+              <calculation class='tableau' formula='AVG(1)' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Column]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Percentage]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Row]' role='dimension' type='ordinal' />
+            <column-instance column='[Column]' derivation='None' name='[none:Column:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Row]' derivation='None' name='[none:Row:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percentage]' derivation='Sum' name='[sum:Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BV_Color (copy 2) (copy)]' derivation='User' name='[usr:BV_Color (copy 2) (copy):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812157853715]' derivation='User' name='[usr:Calculation_671880812157853715:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812168118297]' derivation='User' name='[usr:Calculation_671880812168118297:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1rbg9rl1282nz91939phn1ocogfx'>
+            <column caption='20_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy 2)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;20th Century Fox&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column caption='BV_calc' datatype='real' default-format='p0.0%' name='[Calculation_671880812157071378]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column datatype='string' name='[Distributor]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Gross]' role='measure' type='quantitative' />
+            <column-instance column='[BV_calc (copy 2)]' derivation='User' name='[usr:BV_calc (copy 2):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_671880812157071378]' derivation='User' name='[usr:Calculation_671880812157071378:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' direction='ASC' using='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]'>
+            <groupfilter function='member' level='[none:Row:ok]' member='10' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </sort>
+          <sort class='natural' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='26' />
+            <format attr='border-color' scope='rows' value='#ffffff' />
+            <format attr='border-style' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' value='false' />
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-color' scope='cols' value='#ffffff' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='line-visibility' id='annotation_0' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2) (copy):nk]' />
+              <lod column='[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:BV_calc (copy 2):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='30' />
+                <format attr='maxwidth' value='30' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</rows>
+        <cols>([federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok] * [federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontsize='24'>&lt;</run>
+              <run bold='true' fontsize='24'>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:BV_calc (copy 2):qk]</run>
+              <run bold='true' fontsize='24'>&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812157071378:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>5</value>
+                    <value>6</value>
+                    <value>0.55000000000000004</value>
+                    <value>false</value>
+                    <value>1.0</value>
+                    <value>0.29325395832508638</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='1' y='14' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+    <worksheet name='Buena Vista (Disney)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Waffle)' name='federated.0edgpnz0p8sfxm1e951ej0sehyi3' />
+            <datasource caption='MoviesByYear (BoxOfficeDistributorData)' name='federated.1rbg9rl1282nz91939phn1ocogfx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0edgpnz0p8sfxm1e951ej0sehyi3'>
+            <column caption='BV_Color' datatype='boolean' name='[Calculation_671880812157853715]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[Calculation_671880812157071378]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='AVG(1)' datatype='real' name='[Calculation_671880812168118297]' role='measure' type='quantitative' user:unnamed='Buena Vista (Disney)'>
+              <calculation class='tableau' formula='AVG(1)' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Column]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Percentage]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Row]' role='dimension' type='ordinal' />
+            <column-instance column='[Column]' derivation='None' name='[none:Column:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Row]' derivation='None' name='[none:Row:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percentage]' derivation='Sum' name='[sum:Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_671880812157853715]' derivation='User' name='[usr:Calculation_671880812157853715:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812168118297]' derivation='User' name='[usr:Calculation_671880812168118297:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1rbg9rl1282nz91939phn1ocogfx'>
+            <column caption='BV_calc' datatype='real' default-format='p0.0%' name='[Calculation_671880812157071378]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column datatype='string' name='[Distributor]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Gross]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_671880812157071378]' derivation='User' name='[usr:Calculation_671880812157071378:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' direction='ASC' using='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]'>
+            <groupfilter function='member' level='[none:Row:ok]' member='10' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </sort>
+          <sort class='natural' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='26' />
+            <format attr='border-color' scope='rows' value='#ffffff' />
+            <format attr='border-style' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' value='false' />
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-color' scope='cols' value='#ffffff' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='line-visibility' id='annotation_0' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]' />
+              <lod column='[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812157071378:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='30' />
+                <format attr='maxwidth' value='30' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</rows>
+        <cols>([federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok] * [federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontsize='24'>&lt;</run>
+              <run bold='true' fontsize='24'>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812157071378:qk]</run>
+              <run bold='true' fontsize='24'>&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812157071378:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>5</value>
+                    <value>6</value>
+                    <value>0.55000000000000004</value>
+                    <value>false</value>
+                    <value>1.0</value>
+                    <value>0.29325395832508638</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='1' y='14' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+    <worksheet name='Universal'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Waffle)' name='federated.0edgpnz0p8sfxm1e951ej0sehyi3' />
+            <datasource caption='MoviesByYear (BoxOfficeDistributorData)' name='federated.1rbg9rl1282nz91939phn1ocogfx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0edgpnz0p8sfxm1e951ej0sehyi3'>
+            <column caption='UN_Color' datatype='boolean' name='[BV_Color (copy 2)]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[BV_calc (copy 3)]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='BV_Color' datatype='boolean' name='[Calculation_671880812157853715]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[Calculation_671880812157071378]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='AVG(1)' datatype='real' name='[Calculation_671880812168118297]' role='measure' type='quantitative' user:unnamed='Buena Vista (Disney)'>
+              <calculation class='tableau' formula='AVG(1)' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Column]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Percentage]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Row]' role='dimension' type='ordinal' />
+            <column-instance column='[Column]' derivation='None' name='[none:Column:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Row]' derivation='None' name='[none:Row:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percentage]' derivation='Sum' name='[sum:Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BV_Color (copy 2)]' derivation='User' name='[usr:BV_Color (copy 2):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812157853715]' derivation='User' name='[usr:Calculation_671880812157853715:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812168118297]' derivation='User' name='[usr:Calculation_671880812168118297:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1rbg9rl1282nz91939phn1ocogfx'>
+            <column caption='UN_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy 3)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Universal&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column caption='BV_calc' datatype='real' default-format='p0.0%' name='[Calculation_671880812157071378]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column datatype='string' name='[Distributor]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Gross]' role='measure' type='quantitative' />
+            <column-instance column='[BV_calc (copy 3)]' derivation='User' name='[usr:BV_calc (copy 3):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_671880812157071378]' derivation='User' name='[usr:Calculation_671880812157071378:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' direction='ASC' using='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]'>
+            <groupfilter function='member' level='[none:Row:ok]' member='10' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </sort>
+          <sort class='natural' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='26' />
+            <format attr='border-color' scope='rows' value='#ffffff' />
+            <format attr='border-style' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' value='false' />
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-color' scope='cols' value='#ffffff' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='line-visibility' id='annotation_0' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2):nk]' />
+              <lod column='[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:BV_calc (copy 3):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='30' />
+                <format attr='maxwidth' value='30' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</rows>
+        <cols>([federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok] * [federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontsize='24'>&lt;</run>
+              <run bold='true' fontsize='24'>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:BV_calc (copy 3):qk]</run>
+              <run bold='true' fontsize='24'>&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812157071378:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>5</value>
+                    <value>6</value>
+                    <value>0.55000000000000004</value>
+                    <value>false</value>
+                    <value>1.0</value>
+                    <value>0.29325395832508638</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='1' y='14' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+    <worksheet name='Warner Bros'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Waffle)' name='federated.0edgpnz0p8sfxm1e951ej0sehyi3' />
+            <datasource caption='MoviesByYear (BoxOfficeDistributorData)' name='federated.1rbg9rl1282nz91939phn1ocogfx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0edgpnz0p8sfxm1e951ej0sehyi3'>
+            <column caption='WB_Color' datatype='boolean' name='[BV_Color (copy)]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[BV_calc (copy)]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='BV_Color' datatype='boolean' name='[Calculation_671880812157853715]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[federated.1rbg9rl1282nz91939phn1ocogfx].[Calculation_671880812157071378]&gt;=SUM([Percentage])' />
+            </column>
+            <column caption='AVG(1)' datatype='real' name='[Calculation_671880812168118297]' role='measure' type='quantitative' user:unnamed='Buena Vista (Disney)'>
+              <calculation class='tableau' formula='AVG(1)' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Column]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Percentage]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Row]' role='dimension' type='ordinal' />
+            <column-instance column='[Column]' derivation='None' name='[none:Column:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Row]' derivation='None' name='[none:Row:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percentage]' derivation='Sum' name='[sum:Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BV_Color (copy)]' derivation='User' name='[usr:BV_Color (copy):nk:2]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812157853715]' derivation='User' name='[usr:Calculation_671880812157853715:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_671880812168118297]' derivation='User' name='[usr:Calculation_671880812168118297:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1rbg9rl1282nz91939phn1ocogfx'>
+            <column caption='WB_calc' datatype='real' default-format='p0.0%' name='[BV_calc (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Warner Bros.&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column caption='BV_calc' datatype='real' default-format='p0.0%' name='[Calculation_671880812157071378]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Distributor]=&apos;Buena Vista&apos; THEN [Gross] ELSE 0 END)&#13;&#10;/&#13;&#10;SUM({FIXED: SUM([Gross])})' />
+            </column>
+            <column datatype='string' name='[Distributor]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Gross]' role='measure' type='quantitative' />
+            <column-instance column='[BV_calc (copy)]' derivation='User' name='[usr:BV_calc (copy):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_671880812157071378]' derivation='User' name='[usr:Calculation_671880812157071378:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' direction='ASC' using='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]'>
+            <groupfilter function='member' level='[none:Row:ok]' member='10' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </sort>
+          <sort class='natural' column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='26' />
+            <format attr='border-color' scope='rows' value='#ffffff' />
+            <format attr='border-style' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]' value='false' />
+            <format attr='display' field='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-color' scope='cols' value='#ffffff' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='line-visibility' id='annotation_0' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy):nk:2]' />
+              <lod column='[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:BV_calc (copy):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='30' />
+                <format attr='maxwidth' value='30' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</rows>
+        <cols>([federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok] * [federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontsize='24'>&lt;</run>
+              <run bold='true' fontsize='24'>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:BV_calc (copy):qk]</run>
+              <run bold='true' fontsize='24'>&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[sum:Percentage:qk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]</field>
+                      <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812168118297:qk]</field>
+                      <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812157071378:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>5</value>
+                    <value>6</value>
+                    <value>0.55000000000000004</value>
+                    <value>false</value>
+                    <value>1.0</value>
+                    <value>0.29325395832508638</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='1' y='14' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='WW34'>
+      <style />
+      <size maxheight='620' maxwidth='500' minheight='620' minwidth='500' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='6' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='4' type='layout-basic' w='99200' x='0' y='0'>
+              <zone h='12097' id='1' type='text' w='99200' x='0' y='0'>
+                <formatted-text>
+                  <run fontsize='18'>Disney&apos;s Domination of the Box Office</run>
+                  <run>&#10;In 2016 </run>
+                  <run bold='true' fontcolor='#b07aa1'>Disney (Buena Vista)</run>
+                  <run> dominated </run>
+                  <run bold='true' fontcolor='#b07aa1'>almost 30% of US box office ticket sales</run>
+                  <run>.</run>
+                </formatted-text>
+              </zone>
+              <zone h='43709' id='3' name='Buena Vista (Disney)' w='49600' x='0' y='12097' />
+              <zone h='44194' id='8' name='20th Century Fox' w='49600' x='0' y='55806' />
+              <zone h='43709' id='10' name='Warner Bros' w='49600' x='49600' y='12097' />
+              <zone h='44194' id='12' name='Universal' w='49600' x='49600' y='55806' />
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='dashboard' maximized='true' name='WW34'>
+      <viewpoints>
+        <viewpoint name='20th Century Fox'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2) (copy):nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Buena Vista (Disney)'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Universal'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2):nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Warner Bros'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy):nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='20th Century Fox'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2) (copy):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Sample - Superstore].[usr:Calculation_671880812144070661:nk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Calculation_671880812148199433:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Percentage:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2) (copy):nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Calculation_671880812129071104:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Distributor:nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Total Gross:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Year:ok]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812142866436:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Buena Vista (Disney)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Sample - Superstore].[usr:Calculation_671880812144070661:nk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Calculation_671880812148199433:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Percentage:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:Calculation_671880812157853715:nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Calculation_671880812129071104:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Distributor:nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Total Gross:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Year:ok]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812142866436:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Universal'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Sample - Superstore].[usr:Calculation_671880812144070661:nk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Calculation_671880812148199433:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Percentage:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy 2):nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Calculation_671880812129071104:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Distributor:nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Total Gross:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Year:ok]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812142866436:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Warner Bros'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Sample - Superstore].[usr:Calculation_671880812144070661:nk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Calculation_671880812148199433:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Column:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Percentage:qk]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[none:Row:ok]</field>
+            <field>[federated.0edgpnz0p8sfxm1e951ej0sehyi3].[usr:BV_Color (copy):nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Calculation_671880812129071104:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Distributor:nk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Total Gross:qk]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[none:Year:ok]</field>
+            <field>[federated.1rbg9rl1282nz91939phn1ocogfx].[usr:Calculation_671880812142866436:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='WW34' width='192'>
+      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
+      JRbOvvyjfPWrXyHVtII9vdmVH5lQgIy3+LjOKMku6iuhP6zT19lCJKWxYdUSymaez6dv+ihF
+      djP9nW3ULbiWX/znN1j78lL2b3yFJmUyD/zXj9nxyl+Ils4gtmcZB/1RFi/bwszJlWBy43XE
+      GYy8P16DRJOVGT4LTS3tKM5i5jWU0bS/jUMJE1OLbHiqGrntS1/l+ovqeW7hMjLJCCtff5nJ
+      V3+BD86toqWjj5vu+DZfuLyWVVv389pTj9F49a3ce+cn+cv/exo1E+WtxW9Qe8En+Mj500bS
+      Pbz5Db78pS/xq6c3cO1lZ6Mlh3j9tTeY++Ev8IHJOg/9fQs/+q//5toZIo+9sIItKxfhnnI+
+      n/7kx47bCuY9r6OJmdv58vd+yp/+9AjT9RaW7+rMzh3XdTJKdnOs6FCEof42Fr+1iqkzz0IQ
+      BSyeUqqKnDgcNlRVY92bL9E+mKG0ogLLMdOQzTYvZxTD4pWrqZ4+H9Mx39XOvpKvfuYqWneu
+      4dFnF4MogqqiA5nAIZ5bvAGHy0t5qRvlmE2cjpvsquvEQz3s6ZapLz2qjOs+9zUunlHKkoVP
+      sHx7G2Citq4a2eFAVhRikQghfxuLlqxh6uwzEVUL13xgNi899yQh62SqvbYj7vUJz0t/zxBE
+      zjizjtVLl+Itb6Rm8lQObF+JyVqJVYY3nnuGiGChtKoSs5LdgKxx/uVcclY9AiC7S6gqcuFw
+      ZtstEo3StncLq3a0M2/mZDSgcfZFXDJ/6qgyNy74EA898id++6NbefThp8kAM8+9gnPOqEVI
+      xZC8FbisMpWVlcSjQ1z16a9y1VnlrH3jGd7YsP+UVtEEX4ES/OWB+3jDZSGWlvjO50pIlXv4
+      r5/8G9UeiaT3TKadfznW137O8uUdWK3lXHuCsIiJDK8++xd2lLuIpY953AkSF188n6//9K/8
+      4Ne/H3VN94FNPPb0y6AoNF54LqKzGk9sO3d/70d87fZP09m0jkcGuxho7WH+kWvMnhKs4QAR
+      FVyA0tvEv9x1F+lUiktvvJ1Sy1EBrHrjOZZua0VJS1SWuml9W54nn305tkW/YvnyTuxuH1fr
+      MPuSD/HHP/8TN3z/0axYM4MMxt34XO+D958jTD1jNv/x0E/51k8/hrdSpn3DfUz92J2YBDCp
+      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
+      TkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,1134 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0728.2252                               -->
+<workbook original-version='10.3' source-build='10.3.2 (10300.17.0728.2252)' source-platform='win' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='5 millenia of solar eclipses Extract' inline='true' name='federated.1uo2h9c0hnw8fl1b0rps912jidwm' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection name='dataengine.1t4mj7o0nleire19hho0e0tgyojy'>
+            <connection class='dataengine' dbname='E:/Dropbox/Analytics/Tableau Development/data/5 millenia of solar eclipses.tde' schema='Extract' tablename='Extract'>
+              <calculations>
+                <calculation column='[Number of Records]' formula='1' />
+              </calculations>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <relation connection='dataengine.1t4mj7o0nleire19hho0e0tgyojy' name='Extract' table='[Extract].[Extract]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>BC or AC date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BC or AC date]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>BC or AC date</remote-alias>
+            <ordinal>0</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;AC&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;BC&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+              <statistic aggregation='Median' datatype='string'>&quot;AC&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Calendar Date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Calendar Date]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Calendar Date</remote-alias>
+            <ordinal>1</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>11898</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;0000-06-20 13:45:32&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;3000-10-19 16:10:16&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>7</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Central Duration (s)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Central Duration (s)]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Central Duration (s)</remote-alias>
+            <ordinal>2</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>678</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;00m00s&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;12m23s&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Duration in seconds</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[Duration in seconds]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Duration in seconds</remote-alias>
+            <ordinal>3</ordinal>
+            <family>Sheet1</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>678</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>1846763.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>155.21625483274499</statistic>
+              <statistic aggregation='Min' datatype='integer'>0</statistic>
+              <statistic aggregation='Max' datatype='integer'>743</statistic>
+              <statistic aggregation='Stdev' datatype='real'>166.50936347373266</statistic>
+              <statistic aggregation='StdevP' datatype='real'>166.50236595892747</statistic>
+              <statistic aggregation='Var' datatype='real'>27725.368124427616</statistic>
+              <statistic aggregation='VarP' datatype='real'>27723.037869920605</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>616496341.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eclipse ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Eclipse ID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Eclipse ID</remote-alias>
+            <ordinal>4</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>11898</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;1&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;9999&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eclipse Magnitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Eclipse Magnitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Eclipse Magnitude</remote-alias>
+            <ordinal>5</ordinal>
+            <family>Sheet1</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>4905</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Min' datatype='real'>0.0</statistic>
+              <statistic aggregation='Max' datatype='real'>1.0812999999999999</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eclipse Type (simplified)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Eclipse Type (simplified)]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Eclipse Type (simplified)</remote-alias>
+            <ordinal>6</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;A&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;T&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eclipse Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Eclipse Type]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Eclipse Type</remote-alias>
+            <ordinal>7</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>19</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;A&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Ts&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eclipse type category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Eclipse type category]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Eclipse type category</remote-alias>
+            <ordinal>8</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Annular&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Total&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gamma</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Gamma]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Gamma</remote-alias>
+            <ordinal>9</ordinal>
+            <family>Sheet1</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>9828</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>-29.376499999999691</statistic>
+              <statistic aggregation='Avg' datatype='real'>-0.002469028408135795</statistic>
+              <statistic aggregation='Min' datatype='real'>-1.569</statistic>
+              <statistic aggregation='Max' datatype='real'>1.5706</statistic>
+              <statistic aggregation='Stdev' datatype='real'>0.90086357465356259</statistic>
+              <statistic aggregation='StdevP' datatype='real'>0.90082571608471329</statistic>
+              <statistic aggregation='Var' datatype='real'>0.81155518013759487</statistic>
+              <statistic aggregation='VarP' datatype='real'>0.81148697075953657</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>9655.1445095099989</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>10</ordinal>
+            <family>Sheet1</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1653</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Min' datatype='real'>-88.5</statistic>
+              <statistic aggregation='Max' datatype='real'>89.5</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <family>Sheet1</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>3448</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Min' datatype='real'>-179.90000000000001</statistic>
+              <statistic aggregation='Max' datatype='real'>180.0</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[Number of Records]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>11898.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+              <statistic aggregation='Min' datatype='integer'>1</statistic>
+              <statistic aggregation='Max' datatype='integer'>1</statistic>
+              <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+              <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+              <statistic aggregation='Var' datatype='real'>0.0</statistic>
+              <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+              <statistic aggregation='Median' datatype='integer'>1</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>11898.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Saros Number</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[Saros Number]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Saros Number</remote-alias>
+            <ordinal>13</ordinal>
+            <family>Sheet1</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>204</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>1040875.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>87.483190452176842</statistic>
+              <statistic aggregation='Min' datatype='integer'>-13</statistic>
+              <statistic aggregation='Max' datatype='integer'>190</statistic>
+              <statistic aggregation='Stdev' datatype='real'>48.380283759090396</statistic>
+              <statistic aggregation='StdevP' datatype='real'>48.37825058963481</statistic>
+              <statistic aggregation='Var' datatype='real'>2340.6518566101063</statistic>
+              <statistic aggregation='VarP' datatype='real'>2340.4551301135011</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>118905801.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sun Altitude (in degrees)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sun Altitude (in degrees)]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Sun Altitude (in degrees)</remote-alias>
+            <ordinal>14</ordinal>
+            <family>Sheet1</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>861</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;0.0°&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;90.0°&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>11898</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;de&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='MonthlyLat-Max' datatype='real' name='[Calculation2 (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([Calculation_607423045301710855])' />
+      </column>
+      <column caption='Date-BcAcDatePart' datatype='string' name='[Calculation_607423045297459201]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT([Calendar Date],10)' />
+      </column>
+      <column caption='Date-BcAcDate' datatype='date' name='[Calculation_607423045298401282]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE([Calculation_607423045297459201])' />
+      </column>
+      <column caption='Date-YearRound' datatype='integer' name='[Calculation_607423045298655235]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='YEAR(DATE(STR(LEFT(STR([Calculation_607423045298401282]),2)+&quot;00&quot;)+&quot;-1-1&quot;))' />
+      </column>
+      <column caption='Date-YearRoundScale' datatype='integer' name='[Calculation_607423045299281924]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [BC or AC date] = &apos;BC&apos; THEN -[Calculation_607423045298655235] ELSE [Calculation_607423045298655235] END' />
+      </column>
+      <column caption='MonthlyLat-Avg' datatype='real' name='[Calculation_607423045301710855]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{INCLUDE DATEPART(&apos;month&apos;, [Calculation_607423045309341707]) : AVG([Latitude])}' />
+      </column>
+      <column caption='MonthlyLat-Min' datatype='real' name='[Calculation_607423045307842569]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MIN([Calculation_607423045301710855])' />
+      </column>
+      <column caption='MonthlyLat-Range' datatype='real' name='[Calculation_607423045307940874]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation2 (copy)]-[Calculation_607423045307842569]' />
+      </column>
+      <column caption='Date-YearRoundCalc' datatype='date' name='[Calculation_607423045309341707]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(STR([Calculation_607423045298655235])+&quot;-&quot;+STR(MONTH([Calculation_607423045298401282]))+&quot;-1&quot;)' />
+      </column>
+      <column caption='Month' datatype='integer' name='[Calculation_607423045310160908]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MONTH([Calculation_607423045298401282])' />
+      </column>
+      <column caption='Hemisphere' datatype='string' name='[Calculation_607423045310910477]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Latitude] &gt; 0 &#13;&#10;THEN &apos;Northern&apos;&#13;&#10;ELSE &apos;Southern&apos;&#13;&#10;END' />
+      </column>
+      <column caption='TextYearRound' datatype='string' name='[Calculation_607423045314453519]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(LEFT(STR([Calculation_607423045298401282]),2)+&quot;00&quot;)' />
+      </column>
+      <column caption='TextYearInt' datatype='integer' name='[Calculation_607423045314613264]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INT([Calculation_607423045314453519])' />
+      </column>
+      <column caption='TextYearInt-Display' datatype='string' name='[Calculation_607423045328801809]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_607423045314613264] = 0 THEN &apos;000&apos;&#13;&#10;ELSE STR([Calculation_607423045314613264])&#13;&#10;END' />
+      </column>
+      <column caption='Text-YearRoundScale' datatype='integer' name='[Date-YearRoundScale (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [BC or AC date] = &apos;BC&apos; THEN -[Calculation_607423045314613264] ELSE [Calculation_607423045314613264] END' />
+      </column>
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='YearLat-Avg' datatype='real' name='[MonthlyLat-Avg (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ AVG([Latitude])}' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Saros Number]' role='dimension' type='ordinal' />
+      <column-instance column='[Calculation_607423045310910477]' derivation='None' name='[none:Calculation_607423045310910477:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.517986' measure-ordering='alphabetic' measure-percentage='0.482014' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_607423045310910477:nk]' type='palette'>
+            <map to='#5890ff'>
+              <bucket>&quot;Northern&quot;</bucket>
+            </map>
+            <map to='#ff6511'>
+              <bucket>&quot;Southern&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>Monthly Average Latitude Range of Solar Eclipses by Century</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#5890ff' fontname='Tableau Semibold' fontsize='11'>Northern</run>
+            <run fontsize='11'> vs. </run>
+            <run fontcolor='#ff6511' fontname='Tableau Semibold' fontsize='11'>Southern</run>
+            <run fontname='Tableau Semibold' fontsize='11'>Æ </run>
+            <run fontsize='11'>Hemipshere: 1900 BC - 2999 AD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 millenia of solar eclipses Extract' name='federated.1uo2h9c0hnw8fl1b0rps912jidwm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1uo2h9c0hnw8fl1b0rps912jidwm'>
+            <column datatype='string' name='[BC or AC date]' role='dimension' type='nominal' />
+            <column caption='MonthlyLat-Max' datatype='real' name='[Calculation2 (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MAX([Calculation_607423045301710855])' />
+            </column>
+            <column caption='Date-BcAcDatePart' datatype='string' name='[Calculation_607423045297459201]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT([Calendar Date],10)' />
+            </column>
+            <column caption='Date-BcAcDate' datatype='date' name='[Calculation_607423045298401282]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE([Calculation_607423045297459201])' />
+            </column>
+            <column caption='Date-YearRound' datatype='integer' name='[Calculation_607423045298655235]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR(DATE(STR(LEFT(STR([Calculation_607423045298401282]),2)+&quot;00&quot;)+&quot;-1-1&quot;))' />
+            </column>
+            <column caption='MonthlyLat-Avg' datatype='real' name='[Calculation_607423045301710855]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{INCLUDE DATEPART(&apos;month&apos;, [Calculation_607423045309341707]) : AVG([Latitude])}' />
+            </column>
+            <column caption='MonthlyLat-Min' datatype='real' name='[Calculation_607423045307842569]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN([Calculation_607423045301710855])' />
+            </column>
+            <column caption='MonthlyLat-Range' datatype='real' name='[Calculation_607423045307940874]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation2 (copy)]-[Calculation_607423045307842569]' />
+            </column>
+            <column caption='Date-YearRoundCalc' datatype='date' name='[Calculation_607423045309341707]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(STR([Calculation_607423045298655235])+&quot;-&quot;+STR(MONTH([Calculation_607423045298401282]))+&quot;-1&quot;)' />
+            </column>
+            <column caption='Hemisphere' datatype='string' name='[Calculation_607423045310910477]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Latitude] &gt; 0 &#13;&#10;THEN &apos;Northern&apos;&#13;&#10;ELSE &apos;Southern&apos;&#13;&#10;END' />
+            </column>
+            <column caption='TextYearRound' datatype='string' name='[Calculation_607423045314453519]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR(LEFT(STR([Calculation_607423045298401282]),2)+&quot;00&quot;)' />
+            </column>
+            <column caption='TextYearInt' datatype='integer' name='[Calculation_607423045314613264]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INT([Calculation_607423045314453519])' />
+            </column>
+            <column caption='TextYearInt-Display' datatype='string' name='[Calculation_607423045328801809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_607423045314613264] = 0 THEN &apos;000&apos;&#13;&#10;ELSE STR([Calculation_607423045314613264])&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Calendar Date]' role='dimension' type='nominal' />
+            <column caption='Text-YearRoundScale' datatype='integer' name='[Date-YearRoundScale (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [BC or AC date] = &apos;BC&apos; THEN -[Calculation_607423045314613264] ELSE [Calculation_607423045314613264] END' />
+            </column>
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column-instance column='[BC or AC date]' derivation='Attribute' name='[attr:BC or AC date:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_607423045328801809]' derivation='Attribute' name='[attr:Calculation_607423045328801809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Latitude]' derivation='Avg' name='[avg:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_607423045310910477]' derivation='None' name='[none:Calculation_607423045310910477:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date-YearRoundScale (copy)]' derivation='None' name='[none:Date-YearRoundScale (copy):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date-YearRoundScale (copy)]' derivation='None' name='[none:Date-YearRoundScale (copy):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation2 (copy)]' derivation='User' name='[usr:Calculation2 (copy):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_607423045307842569]' derivation='User' name='[usr:Calculation_607423045307842569:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_607423045307940874]' derivation='User' name='[usr:Calculation_607423045307940874:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Date-YearRoundScale (copy):qk]' included-values='in-range'>
+            <min>-1900</min>
+            <max>2900</max>
+          </filter>
+          <slices>
+            <column>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[:Measure Names]</column>
+            <column>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Date-YearRoundScale (copy):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[avg:Latitude:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[avg:Latitude:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' field-type='quantitative' major-origin='0.0' major-spacing='66.5' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' scope='rows' value='true' />
+            <format attr='title' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Date-YearRoundScale (copy):qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]' value='*#,##0.0;-#,##0.0' />
+            <format attr='text-format' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]' value='*+#,##0.0;-#,##0.0' />
+            <format attr='text-format' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]' value='*+#,##0.0;-#,##0.0' />
+            <format attr='text-format' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' value='*+#.#°;-#.#°;+0.0°' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' value='*+#.#°;-#.#°;+0.0°' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-size' id='refline0' value='1' />
+            <format attr='stroke-color' id='refline0' value='#6666664b' />
+            <format attr='vertical-align' id='refline1' value='bottom' />
+            <format attr='stroke-size' id='refline1' value='1' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dotted' />
+            <format attr='stroke-color' id='refline1' value='#8989894b' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='color' id='refline1' value='#b4b4b4' />
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#00000000' />
+            <format attr='line-visibility' id='refline2' value='on' />
+            <format attr='line-pattern-only' id='refline2' value='dotted' />
+            <format attr='stroke-size' id='refline2' value='1' />
+            <format attr='color' id='refline2' value='#b4b4b4' />
+            <format attr='vertical-align' id='refline3' value='bottom' />
+            <format attr='line-visibility' id='refline3' value='on' />
+            <format attr='line-pattern-only' id='refline3' value='dotted' />
+            <format attr='stroke-size' id='refline3' value='1' />
+            <format attr='stroke-color' id='refline3' value='#8989894b' />
+            <format attr='fill-above' id='refline3' value='#00000000' />
+            <format attr='fill-below' id='refline3' value='#00000000' />
+            <format attr='color' id='refline3' value='#b4b4b4' />
+            <format attr='fill-above' id='refline4' value='#00000000' />
+            <format attr='fill-below' id='refline4' value='#00000000' />
+            <format attr='stroke-size' id='refline4' value='1' />
+            <format attr='line-visibility' id='refline4' value='on' />
+            <format attr='line-pattern-only' id='refline4' value='dotted' />
+            <format attr='stroke-color' id='refline4' value='#8989894b' />
+            <format attr='color' id='refline4' value='#b4b4b4' />
+            <format attr='stroke-color' id='refline2' value='#b4b4b4' />
+            <format attr='text-format' id='refline0' value='*+#.#°;-#.#°;+0.0°' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:Calculation_607423045328801809:nk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:BC or AC date:nk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.0' value-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' z-order='1' />
+            <reference-line axis-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline1' label='Tropic of Cancer' label-type='custom' scope='per-table' value='23.5' value-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' z-order='2' />
+            <reference-line axis-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline2' label='Tropic of Capiricorn' label-type='custom' scope='per-table' value='-23.5' value-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' z-order='3' />
+            <reference-line axis-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline3' label='Antarctic Circle' label-type='custom' scope='per-table' value='-66.5' value-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' z-order='4' />
+            <reference-line axis-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline4' label='Arctic Circle' label-type='custom' scope='per-table' value='66.5' value-column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]' z-order='5' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>In </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:Calculation_607423045328801809:nk]&gt; &lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:BC or AC date:nk]&gt; </run>
+                <run fontcolor='#787878'>in the </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]&gt;</run>
+                <run fontcolor='#787878'> Hemisphere, the monthly average latitude of solar eclipses ranged </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]&gt;° </run>
+                <run fontcolor='#787878'>from </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]&gt;°</run>
+                <run fontcolor='#787878'> to </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]&gt;°</run>
+                <run fontcolor='#787878'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:Calculation_607423045328801809:nk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:BC or AC date:nk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]' />
+              <lod column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Date-YearRoundScale (copy):ok]' />
+              <color column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]' />
+              <size column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>In </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:Calculation_607423045328801809:nk]&gt; &lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:BC or AC date:nk]&gt; </run>
+                <run fontcolor='#787878'>in the </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]&gt;</run>
+                <run fontcolor='#787878'> Hemisphere, the monthly average latitude of solar eclipses ranged </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]&gt;° </run>
+                <run fontcolor='#787878'>from </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]&gt;°</run>
+                <run fontcolor='#787878'> to </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]&gt;°</run>
+                <run fontcolor='#787878'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[avg:Latitude:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:Calculation_607423045328801809:nk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]' />
+              <tooltip column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:BC or AC date:nk]' />
+              <lod column='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>In </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:Calculation_607423045328801809:nk]&gt; &lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[attr:BC or AC date:nk]&gt; </run>
+                <run fontcolor='#787878'>in the </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]&gt;</run>
+                <run fontcolor='#787878'> Hemisphere, the monthly average latitude of solar eclipses ranged </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]&gt;° </run>
+                <run fontcolor='#787878'>from </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307842569:qk]&gt;°</run>
+                <run fontcolor='#787878'> to </run>
+                <run bold='true'>&lt;[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation2 (copy):qk]&gt;°</run>
+                <run fontcolor='#787878'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1uo2h9c0hnw8fl1b0rps912jidwm].[Multiple Values] + [federated.1uo2h9c0hnw8fl1b0rps912jidwm].[avg:Latitude:qk])</rows>
+        <cols>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Date-YearRoundScale (copy):qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='WW35'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='5' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='3' type='layout-basic' w='99600' x='0' y='0'>
+              <zone h='96000' id='1' name='Sheet1' w='99600' x='0' y='0' />
+              <zone h='4000' id='6' type='text' w='49800' x='0' y='96000'>
+                <formatted-text>
+                  <run bold='true'>SOURCE</run>
+                  <run>: NASA</run>
+                </formatted-text>
+              </zone>
+              <zone forceUpdate='true' h='4000' id='7' type='text' w='49800' x='49800' y='96000'>
+                <formatted-text>
+                  <run bold='true' fontalignment='2'>DESIGNED BY: </run>
+                  <run fontalignment='2'>@VizWizBI   |   </run>
+                  <run bold='true' fontalignment='2'>RECREATED BY: </run>
+                  <run fontalignment='2'>@datahasbyte</run>
+                </formatted-text>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='WW35'>
+      <viewpoints>
+        <viewpoint name='Sheet1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]' type='color' />
+            <card pane-specification-id='4' param='[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[usr:Calculation_607423045307940874:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:BC or AC date:nk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045298655235:qk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045299281924:qk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045310910477:nk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045314613264:qk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Calculation_607423045328801809:nk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Date-YearRoundScale (copy):qk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Latitude:ok]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Latitude:qk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[none:Sun Altitude (in degrees):nk]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[yr:Calculation_607423045298401282:ok]</field>
+            <field>[federated.1uo2h9c0hnw8fl1b0rps912jidwm].[yr:Calculation_607423045309341707:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='WW35' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
