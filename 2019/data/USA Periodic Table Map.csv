@@ -1,0 +1,52 @@
+﻿Abbreviation,Random,One,Number of Records,Row,Space,State
+AK,0.898315822,1,1,1,1,Alaska
+ME,0.918937779,1,1,1,12,Maine
+VT,0.329645860,1,1,2,11,Vermont
+NH,0.603323891,1,1,2,12,New Hampshire
+WA,0.689882250,1,1,3,2,Washington
+ID,0.045088198,1,1,3,3,Idaho
+MT,0.926243650,1,1,3,4,Montana
+ND,0.133746143,1,1,3,5,North Dakota
+MN,0.598460167,1,1,3,6,Minnesota
+IL,0.633941424,1,1,3,7,Illinois
+WI,0.926379290,1,1,3,8,Wisconsin
+MI,0.775953247,1,1,3,9,Michigan
+NY,0.745371730,1,1,3,10,New York
+RI,0.750002478,1,1,3,11,Rhode Island
+MA,0.345267277,1,1,3,12,Massachusetts
+OR,0.207097705,1,1,4,2,Oregon
+NV,0.855661424,1,1,4,3,Nevada
+WY,0.705276939,1,1,4,4,Wyoming
+SD,0.818660690,1,1,4,5,South Dakota
+IA,0.061349607,1,1,4,6,Iowa
+IN,0.050984208,1,1,4,7,Indiana
+OH,0.687074468,1,1,4,8,Ohio
+PA,0.273236212,1,1,4,9,Pennsylvania
+NJ,0.125522346,1,1,4,10,New Jersey
+CT,0.565681973,1,1,4,11,Connecticut
+CA,0.401076347,1,1,5,2,California
+UT,0.872974382,1,1,5,3,Utah
+CO,0.089326514,1,1,5,4,Colorado
+NE,0.051824757,1,1,5,5,Nebraska
+MO,0.820515294,1,1,5,6,Missouri
+KY,0.083586898,1,1,5,7,Kentucky
+WV,0.897081444,1,1,5,8,West Virginia
+VA,0.314234901,1,1,5,9,Virginia
+MD,0.400489597,1,1,5,10,Maryland
+DE,0.713872278,1,1,5,11,Delaware
+AZ,0.825952232,1,1,6,3,Arizona
+NM,0.287512636,1,1,6,4,New Mexico
+KS,0.445021384,1,1,6,5,Kansas
+AR,0.242165786,1,1,6,6,Arkansas
+TN,0.608682550,1,1,6,7,Tennessee
+NC,0.698158321,1,1,6,8,North Carolina
+SC,0.583641750,1,1,6,9,South Carolina
+DC,0.408861290,1,1,6,10,District of Columbia
+OK,0.028233472,1,1,7,5,Oklahoma
+LA,0.115371889,1,1,7,6,Louisiana
+MS,0.451711949,1,1,7,7,Mississippi
+AL,0.881213112,1,1,7,8,Alabama
+GA,0.605758273,1,1,7,9,Georgia
+HI,0.558410534,1,1,8,1,Hawaii
+TX,0.178867991,1,1,8,5,Texas
+FL,0.314296171,1,1,8,10,Florida
